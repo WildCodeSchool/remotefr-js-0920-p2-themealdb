@@ -3,6 +3,7 @@ import './App.css';
 import './normalize.css';
 import Carousel from 'react-elastic-carousel';
 import Slider from './components/Slider';
+import './components/Slider.css';
 
 function App() {
   return (
