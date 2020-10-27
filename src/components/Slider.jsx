@@ -1,10 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Slider() {
-  return (
-    <div className="Slider">
-      <p>Hello</p>
-    </div>
-  );
-}
+const Slider = ({ number }) => <div className="slider">{number}</div>;
+Slider.propTypes = {
+  number: PropTypes.string.isRequired,
+};
+
 export default Slider;
