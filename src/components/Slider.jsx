@@ -2,10 +2,9 @@ import React from 'react';
 
 function Slider() {
   return (
-    <div className="slider">
-      <p>Slider</p>
+    <div className="Slider">
+      <p>Hello</p>
     </div>
   );
 }
-
 export default Slider;
