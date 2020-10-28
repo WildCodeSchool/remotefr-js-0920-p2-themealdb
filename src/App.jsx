@@ -8,10 +8,10 @@ function App() {
   return (
     <div className="App">
       <Carousel>
-        <Slider number="1" />
-        <Slider number="2" />
-        <Slider number="3" />
-        <Slider number="4" />
+        <Slider img="1" />
+        <Slider img="2" />
+        <Slider img="3" />
+        <Slider img="4" />
       </Carousel>
     </div>
   );
