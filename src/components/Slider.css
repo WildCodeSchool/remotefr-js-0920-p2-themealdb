@@ -1,13 +1,17 @@
 .slider {
   width: 100%;
   height: 400%;
-  background: rgb(102, 99, 99);
+  background: white;
   color: #fff;
   font-size: 30px;
   margin: 0 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.slider img {
+  max-height: 130px;
+  object-fit: cover;
 }
 .rec.rec-arrow {
   border-radius: 10px;
@@ -16,17 +20,17 @@
 }
 .rec.rec-dot.rec-dot_active {
   background-color: rgb(52, 62, 63);
+  box-shadow: 0;
 }
 .rec-carousel-item:focus {
   outline: none;
   box-shadow: inset 0 0 1px 1px lightgrey;
 }
-.rec.rec-arrow:hover {
+.rec.rec-arrow:hover:enabled {
   font-size: 10px;
+  background-color: #eee;
 }
-.brcpxa {
-  box-shadow: royalblue;
-}
+
 .carousel-inner img {
   width: 100%;
   height: 100%;

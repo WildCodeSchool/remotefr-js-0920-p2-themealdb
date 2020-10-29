@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Slider.css';
 
-const Slider = ({ image }) => (
+const Slider = ({ img }) => (
   <div className="slider">
-    <h1>{image}</h1>
+    <img src={img} alt="food" />
   </div>
 );
 Slider.propTypes = {
-  image: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
 };
 
 export default Slider;
