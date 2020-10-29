@@ -1,7 +1,7 @@
 /* eslint-disable array-callback-return */
 /* eslint-disable prefer-template */
 /* eslint-disable no-undef */
-import React from 'react';
+import React, { Component } from 'react';
 
 const recipe = {
   idMeal: '52772',
@@ -124,55 +124,49 @@ const measuresArray = [
 console.log(ingredientsArray);
 
 /// //////////////////////////////////////////////
+class RecipePage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      // value: 0,
+    };
+  }
 
-function RecipePage() {
-  return (
-    <div className="RecipePage">
-      <h1>{recipe.strMeal}</h1>
-      <div className="Recipe">
-        <div className="ImgRecipe">
-          <img src={recipe.strMealThumb} alt={`${recipe.strMeal}`} />
-        </div>
-        <div className="Ingredients">
-          <ul>
-            {ingredientsArray.map((ingredient) => {
-              if (ingredient !== null && ingredient !== '') {
-                return <li key={ingredient}>{ingredient}</li>;
-              }
-              return false;
-            })}
-          </ul>
-        </div>
-        <div className="Measures">
-          <ul>
-            {measuresArray.map((measure) => {
-              if (measure !== null && measure !== '') {
-                return <li key={measure}>{measure}</li>;
-              }
-              return false;
-            })}
-          </ul>
-        </div>
-        <div className="Instructions">
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo.Nemo enim ipsam voluptatem quia voluptas sit
-            spernatur aut odit aut fugit, sed quia consequuntur magni dolores os
-            qui ratione voluptatem sequi nesciunt.Neque porro quisquam est, i
-            dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, d
-            quia non numquam eius modi tempora incidunt ut labore et dolore gnam
-            aliquam quaerat voluptatem.Ut enim ad minima veniam, quis trum
-            exercitationem ullam corporis suscipit laboriosam, nisi ut quid ex
-            ea commodi consequatur?Quis autem vel eum iure ehenderit qui in ea
-            voluptate velit esse quam nihil molestiae equatur, vel illum qui
-            dolorem eum fugiat quo voluptas nulla pariatur?
-          </p>
+  render() {
+    return (
+      <div className="RecipePage">
+        <h1>{recipe.strMeal}</h1>
+        <div className="Recipe">
+          <div className="ImgRecipe">
+            <img src={recipe.strMealThumb} alt={`${recipe.strMeal}`} />
+          </div>
+          <div className="Ingredients">
+            <ul>
+              {ingredientsArray.map((ingredient) => {
+                if (ingredient !== null && ingredient !== '') {
+                  return <li key={ingredient}>{ingredient}</li>;
+                }
+                return false;
+              })}
+            </ul>
+          </div>
+          <div className="Measures">
+            <ul>
+              {measuresArray.map((measure) => {
+                if (measure !== null && measure !== '') {
+                  return <li key={measure}>{measure}</li>;
+                }
+                return false;
+              })}
+            </ul>
+          </div>
+          <div className="Instructions">
+            <p>{recipe.strInstructions}</p>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default RecipePage;
