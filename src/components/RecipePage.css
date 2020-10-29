@@ -2,4 +2,20 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding: 2rem 5rem;
+}
+
+.ImgRecipe {
+  padding-bottom: 2rem;
+  max-height: 150px;
+  max-width: 150px;
+}
+
+.ImgRecipe img {
+  max-height: 150px;
+  max-width: 150px;
+}
+
+.Ingredients {
+  padding-bottom: 2rem;
 }
