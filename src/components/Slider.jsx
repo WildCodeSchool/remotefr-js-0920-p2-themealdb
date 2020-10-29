@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Slider.css';
 
 const Slider = ({ image }) => (
   <div className="slider">
-    <img src={image} alt="" />
+    <h1>{image}</h1>
   </div>
 );
 Slider.propTypes = {
