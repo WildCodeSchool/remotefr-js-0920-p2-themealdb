@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import RecipePage from './components/RecipePage';
 import './normalize.css';
