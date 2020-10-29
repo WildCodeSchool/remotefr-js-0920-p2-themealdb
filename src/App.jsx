@@ -8,10 +8,10 @@ function App() {
   return (
     <div className="App">
       <Carousel>
-        <Slider img="1" />
-        <Slider img="2" />
-        <Slider img="3" />
-        <Slider img="4" />
+        <Slider img="https://i-reg.unimedias.fr/sites/art-de-vivre/files/styles/large/public/Import/pasteque_istock.jpg" />
+        <Slider img="https://i-reg.unimedias.fr/sites/art-de-vivre/files/styles/large/public/Import/pasteque_istock.jpg" />
+        <Slider img="https://i-reg.unimedias.fr/sites/art-de-vivre/files/styles/large/public/Import/pasteque_istock.jpg" />
+        <Slider img="https://i-reg.unimedias.fr/sites/art-de-vivre/files/styles/large/public/Import/pasteque_istock.jpg" />
       </Carousel>
     </div>
   );
