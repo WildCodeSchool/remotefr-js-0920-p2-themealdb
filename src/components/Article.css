@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+  background-color: #2d2013;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+}
+
 .Article {
+  background-color: #23180d;
   display: flex;
+  justify-content: space-between;
   padding: 1.25em;
-  width: 400px;
-  border: 1px solid #f8f8f8;
-  border-radius: 2px;
+  width: 700px;
+  border-radius: 5px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   font-size: 1.2em;
 }
@@ -12,23 +21,34 @@
   display: flex;
   max-height: 120px;
   margin-right: 1.5rem;
+  border: 4px solid #f8f8f8;
+  border-radius: 5px;
 }
 
 .Article blockquote {
   margin: 0 0 1rem 0;
 }
 
-.Article figcaption p {
-  margin: 0.125rem 0 0 0;
+.Article figcaption {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.Article figcaption p span {
-  color: #eee;
+.Article p {
+  display: block;
 }
 
-.Article figcaption p span.is-favorite {
+.Article p button {
+  color: #f8f8f8;
+  background-color: transparent;
+  border: none;
+}
+
+.Article p button:focus {
+  outline: transparent;
+}
+
+.Article p button.is-favorite {
   color: #ecc94b;
 }
