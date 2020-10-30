@@ -14,12 +14,12 @@
   object-fit: cover;
 }
 .rec.rec-arrow {
-  border-radius: ;
+  border-radius: 10%;
   box-shadow: 0;
-  -webkit-border-radius: 5p;
-  -moz-border-radius: 5p;
-  -ms-border-radius: 5p;
-  -o-border-radius: 5p;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
 }
 .rec.rec-dot.rec-dot_active {
   background-color: rgb(52, 62, 63);
