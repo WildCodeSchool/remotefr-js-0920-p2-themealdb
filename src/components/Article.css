@@ -1,19 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 body {
-  background-color: #2d2013;
+  background-color: #393232;
   font-family: 'Open Sans', sans-serif;
   color: #fff;
 }
 
+.ArticleList {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .Article {
-  background-color: #23180d;
+  background-color: #4d4545;
   display: flex;
   justify-content: space-between;
   padding: 1.25em;
   width: 700px;
   border-radius: 5px;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
   font-size: 1.2em;
 }
 
@@ -21,8 +27,12 @@ body {
   display: flex;
   max-height: 120px;
   margin-right: 1.5rem;
-  border: 4px solid #f8f8f8;
+  border: 4px solid #8d6262;
   border-radius: 5px;
+}
+
+.Article h2 {
+  color: #ed8d8d;
 }
 
 .Article blockquote {
@@ -32,7 +42,6 @@ body {
 .Article figcaption {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .Article p {

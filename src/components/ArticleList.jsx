@@ -1,5 +1,6 @@
 import React from 'react';
 import Article from './Article';
+import './Article.css';
 
 // An array of objects
 const meal = [
@@ -24,7 +25,7 @@ const meal = [
 ];
 
 const ArticleList = () => (
-  <div>
+  <div className="ArticleList">
     {meal.map((item) => (
       <Article
         key={item.strTags}
