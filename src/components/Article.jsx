@@ -23,7 +23,11 @@ class Article extends React.Component {
           <blockquote>
             Tag:
             {tags.map((tag) => {
-              return <button type="button">{tag}</button>;
+              return (
+                <button key={tag} type="button">
+                  {tag}
+                </button>
+              );
             })}
           </blockquote>
         </figcaption>
