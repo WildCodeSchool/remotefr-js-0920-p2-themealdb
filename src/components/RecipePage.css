@@ -1,3 +1,10 @@
+.RecipePage {
+  background-color: #4d4545;
+}
+.RecipePage h1 {
+  color: #ed8d8d;
+}
+
 .Recipe {
   display: flex;
   flex-wrap: wrap;
