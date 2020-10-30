@@ -13,13 +13,18 @@ class Article extends React.Component {
   render() {
     const { strMealThumb, strMeal, strTags } = this.props;
     const { favorite } = this.state;
+    const tags = strTags.split(',');
+
     return (
       <figure className="Article">
         <img src={strMealThumb} alt={strMeal} />
         <figcaption>
           <h2>{strMeal}</h2>
           <blockquote>
-            Tag: <button type="button">{strTags}</button>
+            Tag:
+            {tags.map((tag) => {
+              return <button type="button">{tag}</button>;
+            })}
           </blockquote>
         </figcaption>
         <p>

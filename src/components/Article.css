@@ -44,6 +44,12 @@ body {
   flex-direction: column;
 }
 
+blockquote > button {
+  margin: 0.3em;
+}
+
+/* STARS */
+
 .Article p {
   display: block;
 }
