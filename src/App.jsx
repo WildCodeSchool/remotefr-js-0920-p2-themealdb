@@ -35,7 +35,6 @@ class App extends React.Component {
 
   render() {
     const { recipe } = this.state;
-    console.log('La liste', recipe);
     return (
       <div className="App">
         <Navbar />

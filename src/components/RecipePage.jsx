@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable array-callback-return */
 /* eslint-disable prefer-template */
 /* eslint-disable no-undef */
@@ -68,7 +69,6 @@ function RecipePage({ recipe }) {
     recipe.strMeasure20,
   ];
 
-  console.log('ntm', recipe);
   return (
     <div className="RecipePage">
       <h1>{recipe.strMeal}</h1>
@@ -78,9 +78,9 @@ function RecipePage({ recipe }) {
         </div>
         <div className="Ingredients">
           <ul>
-            {ingredientsArray.map((ingredient) => {
+            {ingredientsArray.map((ingredient, i) => {
               if (ingredient !== null && ingredient !== '') {
-                return <li key={ingredient}>{ingredient}</li>;
+                return <li key={i + '-ingredient'}>{ingredient}</li>;
               }
               return false;
             })}
@@ -88,9 +88,9 @@ function RecipePage({ recipe }) {
         </div>
         <div className="Measures">
           <ul>
-            {measuresArray.map((measure) => {
+            {measuresArray.map((measure, i) => {
               if (measure !== null && measure !== '') {
-                return <li key={measure}>{measure}</li>;
+                return <li key={i + '-measure'}>{measure}</li>;
               }
               return false;
             })}
@@ -105,11 +105,7 @@ function RecipePage({ recipe }) {
 }
 
 RecipePage.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  recipe: PropTypes.any.isRequired,
-  strMeal: PropTypes.string.isRequired,
-  strMealThumb: PropTypes.string.isRequired,
-  strInstructions: PropTypes.string.isRequired,
+  recipe: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 
 export default RecipePage;
