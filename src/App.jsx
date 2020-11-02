@@ -2,7 +2,6 @@ import React from 'react';
 import Carousel from 'react-elastic-carousel';
 import ArticleList from './components/ArticleList';
 import RecipePage from './components/RecipePage';
-import './normalize.css';
 import './components/RecipePage.css';
 import Navbar from './components/Navbar';
 import Slider from './components/Slider';
