@@ -1,7 +1,11 @@
 import React from 'react';
 import Carousel from 'react-elastic-carousel';
+import ArticleList from './components/ArticleList';
+import RecipePage from './components/RecipePage';
+import './normalize.css';
+import './components/RecipePage.css';
+import Navbar from './components/Navbar';
 import Slider from './components/Slider';
-import './components/Slider.css';
 
 function App() {
   const breakPoints = [
@@ -13,6 +17,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <Carousel breakPoints={breakPoints}>
         <Slider img="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" />
         <Slider img="https://daks2k3a4ib2z.cloudfront.net/54f8d2b973ee3d0b0579571c/550af79042dd862c6ca48fa0_food-meat-potatoes-steak-130747-480x320.jpg" />
@@ -23,6 +28,8 @@ function App() {
         <Slider img="https://thumbs.dreamstime.com/b/chicken-jalfrazy-indian-food-recipe-spices-wooden-table-92742377.jpg" />
         <Slider img="https://www.recettes-asselin.com/img/fondue-chinoise.jpg" />
       </Carousel>
+      <ArticleList />
+      <RecipePage />
     </div>
   );
 }

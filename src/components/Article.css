@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+  background-color: #393232;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+}
+
+.ArticleList {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Article {
+  background-color: #4d4545;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25em;
+  width: 700px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+  font-size: 1.2em;
+}
+
+.Article img {
+  display: flex;
+  max-height: 120px;
+  margin-right: 1.5rem;
+  border: 4px solid #8d6262;
+  border-radius: 5px;
+}
+
+.Article h2 {
+  color: #ed8d8d;
+}
+
+.Article blockquote {
+  margin: 0 0 1rem 0;
+}
+
+.Article figcaption {
+  display: flex;
+  flex-direction: column;
+}
+
+/* TAGS */
+
+blockquote > button {
+  margin: 0.3em;
+  box-shadow: inset 0px 1px 0px 0px #a6827e;
+  background: linear-gradient(to bottom, #8d6262 5%, #4d4545 100%);
+  background-color: #8d6262;
+  border-radius: 3px;
+  border: 1px solid #ed8d8d;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 13px;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #4d3534;
+}
+
+blockquote > button:hover {
+  background: linear-gradient(to bottom, #4d4545 5%, #8d6262 100%);
+  background-color: #4d4545;
+}
+
+blockquote > button:active {
+  position: relative;
+  top: 1px;
+}
+
+/* STARS */
+
+.Article p {
+  display: block;
+}
+
+.Article p button {
+  color: #f8f8f8;
+  background-color: transparent;
+  border: none;
+}
+
+.Article p button:focus {
+  outline: transparent;
+}
+
+.Article p button.is-favorite {
+  color: #ecc94b;
+}
