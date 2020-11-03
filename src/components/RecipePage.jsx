@@ -1,7 +1,3 @@
-/* eslint-disable react/no-array-index-key */
-/* eslint-disable array-callback-return */
-/* eslint-disable prefer-template */
-/* eslint-disable no-undef */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -80,7 +76,8 @@ function RecipePage({ recipe }) {
           <ul>
             {ingredientsArray.map((ingredient, i) => {
               if (ingredient !== null && ingredient !== '') {
-                return <li key={i + '-ingredient'}>{ingredient}</li>;
+                // eslint-disable-next-line react/no-array-index-key
+                return <li key={`${i}-ingredient`}>{ingredient}</li>;
               }
               return false;
             })}
@@ -90,7 +87,8 @@ function RecipePage({ recipe }) {
           <ul>
             {measuresArray.map((measure, i) => {
               if (measure !== null && measure !== '') {
-                return <li key={i + '-measure'}>{measure}</li>;
+                // eslint-disable-next-line react/no-array-index-key
+                return <li key={`${i}-measure`}>{measure}</li>;
               }
               return false;
             })}
