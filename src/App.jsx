@@ -14,12 +14,26 @@ class App extends React.Component {
     super(props);
     this.state = {
       recipe: null,
+      recipes: null,
     };
     this.getRecipe = this.getRecipe.bind(this);
+    this.getRandomRecipeList = this.getRandomRecipeList.bind(this);
   }
 
   componentDidMount() {
     this.getRecipe();
+    this.getRandomRecipeList();
+  }
+
+  getRandomRecipeList() {
+    axios
+      .get('https://www.themealdb.com/api/json/v1/1/random.php')
+      .then((response) => response.data)
+      .then((data) => {
+        this.setState({
+          recipes: data.meals[0],
+        });
+      });
   }
 
   getRecipe() {
@@ -34,7 +48,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { recipe } = this.state;
+    const { recipe, recipes } = this.state;
     return (
       <div className="App">
         <Navbar />
@@ -44,7 +58,7 @@ class App extends React.Component {
           <Slider img="https://i-reg.unimedias.fr/sites/art-de-vivre/files/styles/large/public/Import/pasteque_istock.jpg" />
           <Slider img="https://i-reg.unimedias.fr/sites/art-de-vivre/files/styles/large/public/Import/pasteque_istock.jpg" />
         </Carousel>
-        <ArticleList />
+        {recipes ? <ArticleList recipes={recipes} /> : <p>Loading...</p>}
         {recipe ? <RecipePage recipe={recipe} /> : <p>Loading...</p>}
         <button type="button" onClick={this.getRecipe}>
           Get random recipe
