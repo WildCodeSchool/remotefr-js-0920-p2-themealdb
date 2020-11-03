@@ -40,7 +40,6 @@ import './Article.css';
 // );
 
 function ArticleList({ recipes }) {
-  console.log('Les recipes', recipes);
   return (
     <div className="ArticleList">
       {Object.keys(recipes).map((item) => (
