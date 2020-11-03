@@ -5,6 +5,7 @@ import RecipePage from './components/RecipePage';
 import './components/RecipePage.css';
 import Navbar from './components/Navbar';
 import Slider from './components/Slider';
+import './normalize.css';
 
 function App() {
   const breakPoints = [
