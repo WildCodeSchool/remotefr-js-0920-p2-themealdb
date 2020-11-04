@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Article.css';
@@ -23,7 +24,11 @@ class Article extends React.Component {
           <blockquote>
             Tag:
             {tags.map((tag) => {
-              return <button type="button">{tag}</button>;
+              return (
+                <button key={tag} type="button">
+                  {tag}
+                </button>
+              );
             })}
           </blockquote>
         </figcaption>
