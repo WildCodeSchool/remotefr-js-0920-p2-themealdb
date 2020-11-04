@@ -14,7 +14,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       recipe: null,
-      recipes: null,
+      recipes: [],
     };
     this.getRecipe = this.getRecipe.bind(this);
     this.getRandomRecipeList = this.getRandomRecipeList.bind(this);
@@ -31,7 +31,7 @@ class App extends React.Component {
       .then((response) => response.data)
       .then((data) => {
         this.setState({
-          recipes: data.meals[0],
+          recipes: data.meals,
         });
       });
   }

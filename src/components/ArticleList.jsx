@@ -42,10 +42,10 @@ import './Article.css';
 function ArticleList({ recipes }) {
   return (
     <div className="ArticleList">
-      {Object.keys(recipes).map((item) => (
+      {recipes.map((item) => (
         <Article
-          key={item.strTags}
-          strTags={item.strTags}
+          key={item.idMeal}
+          strTags={item.strTags || 'NO-TAG'}
           strMealThumb={item.strMealThumb}
           strMeal={item.strMeal}
         />
