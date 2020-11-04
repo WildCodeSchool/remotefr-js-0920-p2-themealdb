@@ -7,6 +7,8 @@ import './normalize.css';
 import './components/RecipePage.css';
 import Navbar from './components/Navbar';
 import Slider from './components/Slider';
+import ContactForm from './components/ContactForm';
+import './components/ContactForm.css';
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
       </Carousel>
       <ArticleList />
       <RecipePage />
+      <ContactForm />
     </div>
   );
 }

@@ -1,0 +1,25 @@
+label {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+}
+
+input,
+textarea {
+  width: 200px;
+  padding: 3px;
+  font: 1em sans-serif;
+  cursor: pointer;
+  background-color: #8d6262;
+  border: 1px solid #f6cd3f;
+  border-radius: 5px;
+}
+input:hover,
+textarea:hover {
+  cursor: text;
+}
+
+textarea {
+  width: 250px;
+  height: 120px;
+}
