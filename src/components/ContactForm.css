@@ -18,7 +18,6 @@ input:hover,
 textarea:hover {
   cursor: text;
 }
-
 textarea {
   width: 250px;
   height: 120px;

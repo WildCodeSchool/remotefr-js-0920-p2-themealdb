@@ -21,10 +21,11 @@ class App extends Component {
   render() {
     return (
       <div>
+        <h2>Contact :</h2>
         <form onSubmit={this.submit}>
           <label htmlFor="name">Name:</label>
           <input type="text" id="name" onChange={this.change} />
-          <label htmlFor="firstName">First Name</label>
+          <label htmlFor="firstName">First Name:</label>
           <input type="text" id="firstName" onChange={this.change} />
           <label htmlFor="msg">Message:</label>
           <textarea type="text" id="msg" onChange={this.change} />
