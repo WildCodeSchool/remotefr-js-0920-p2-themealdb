@@ -4,7 +4,6 @@ import axios from 'axios';
 import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
 import Slider from './components/Slider';
-import ArticleList from './components/ArticleList';
 import RecipePage from './components/RecipePage';
 import './components/RecipePage.css';
 import './normalize.css';
@@ -14,28 +13,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       recipe: null,
-      recipes: [],
-      searchMeal: [],
     };
     this.getRecipe = this.getRecipe.bind(this);
-    this.getRandomRecipeList = this.getRandomRecipeList.bind(this);
-    this.getSearchMeal = this.getSearchMeal.bind(this);
-  }
-
-  componentDidMount() {
-    this.getRecipe();
-    this.getRandomRecipeList();
-  }
-
-  getRandomRecipeList() {
-    axios
-      .get('https://www.themealdb.com/api/json/v1/1/random.php')
-      .then((response) => response.data)
-      .then((data) => {
-        this.setState({
-          recipes: data.meals,
-        });
-      });
   }
 
   getRecipe() {
@@ -49,17 +28,6 @@ class App extends React.Component {
       });
   }
 
-  getSearchMeal() {
-    axios
-      .get('https://www.themealdb.com/api/json/v1/1/filter.php?a=Canadian')
-      .then((response) => response.data)
-      .then((data) => {
-        this.setState({
-          searchMeal: data.meals.idMeal,
-        });
-      });
-  }
-
   render() {
     const breakPoints = [
       { width: 1, slideShow: 1 },
@@ -67,11 +35,10 @@ class App extends React.Component {
       { width: 768, slideShow: 3 },
       { width: 1200, slideShow: 4 },
     ];
-    const { recipe, recipes, searchMeal } = this.state;
+    const { recipe } = this.state;
     return (
       <div className="App">
         <Navbar />
-        {searchMeal ? <SearchBar searchMeal={searchMeal} /> : <p>Loading...</p>}
         <Carousel breakPoints={breakPoints}>
           <Slider img="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" />
           <Slider img="https://daks2k3a4ib2z.cloudfront.net/54f8d2b973ee3d0b0579571c/550af79042dd862c6ca48fa0_food-meat-potatoes-steak-130747-480x320.jpg" />
@@ -82,7 +49,7 @@ class App extends React.Component {
           <Slider img="https://thumbs.dreamstime.com/b/chicken-jalfrazy-indian-food-recipe-spices-wooden-table-92742377.jpg" />
           <Slider img="https://www.recettes-asselin.com/img/fondue-chinoise.jpg" />
         </Carousel>
-        {recipes ? <ArticleList recipes={recipes} /> : <p>Loading...</p>}
+        <SearchBar />
         {recipe ? <RecipePage recipe={recipe} /> : <p>Loading...</p>}
         <button type="button" onClick={this.getRecipe}>
           Get random recipe
