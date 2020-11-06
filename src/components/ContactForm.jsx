@@ -15,7 +15,6 @@ class App extends Component {
 
   submit = (e) => {
     e.preventDefault();
-    console.log(this.state);
   };
 
   render() {
