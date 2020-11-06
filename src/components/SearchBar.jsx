@@ -22,14 +22,23 @@ class SearchBar extends React.Component {
   }
 
   getRandomRecipeList() {
+    const one = 'https://www.themealdb.com/api/json/v1/1/random.php';
+    const two = 'https://www.themealdb.com/api/json/v1/1/random.php';
+    const three = 'https://www.themealdb.com/api/json/v1/1/random.php';
+
     axios
-      .get('https://www.themealdb.com/api/json/v1/1/random.php')
-      .then((response) => response.data)
-      .then((data) => {
-        this.setState({
-          results: data.meals,
-        });
-      });
+      .all([
+        axios.get(one).then((response) => response.data),
+        axios.get(two).then((response) => response.data),
+        axios.get(three).then((response) => response.data),
+      ])
+      .then(
+        axios.spread((...data) => {
+          this.setState({
+            results: [data[0].meals[0], data[1].meals[0], data[2].meals[0]],
+          });
+        }),
+      );
   }
 
   fetchSearchResults = (query) => {

@@ -2,16 +2,13 @@ import React from 'react';
 import Carousel from 'react-elastic-carousel';
 import axios from 'axios';
 import { Route, Switch } from 'react-router-dom';
-import ArticleList from './components/ArticleList';
 import RecipePage from './components/RecipePage';
 import './components/RecipePage.css';
 import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
 import Slider from './components/Slider';
-import RecipePage from './components/RecipePage';
 import ContactForm from './components/ContactForm';
 import './components/ContactForm.css';
-import './components/RecipePage.css';
 import './normalize.css';
 
 class App extends React.Component {
