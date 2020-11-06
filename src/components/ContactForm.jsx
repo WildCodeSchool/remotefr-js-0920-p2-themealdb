@@ -4,11 +4,12 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      lastName: null,
       name: null,
-      age: null,
-      gender: null,
+      email: null,
     };
   }
+
   change = (e) => {
     this.setState({
       [e.target.id]: e.target.value,
@@ -20,23 +21,47 @@ class App extends Component {
   };
 
   render() {
+    const { lastName, name, email } = this.state;
     return (
       <div>
         <form onSubmit={this.submit}>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" onChange={this.change} />
-          <label htmlFor="firstName">First Name</label>
-          <input type="text" id="firstName" onChange={this.change} />
-          <label htmlFor="msg">Message:</label>
-          <textarea type="text" id="msg" onChange={this.change} />
-          <label htmlFor="email">Email:</label>
-          <input
-            type="text"
-            id="email"
-            placeholder="fredericdurand@sfr.fr"
-            onChange={this.change}
-          />
-          <button>Send</button>
+          <label htmlFor="name">
+            Last name:
+            <input
+              type="text"
+              id="lastName"
+              value={lastName}
+              onChange={this.change}
+            />
+          </label>
+
+          <label htmlFor="firstName">
+            First Name:
+            <input
+              type="text"
+              id="firstName"
+              value={name}
+              valueonChange={this.change}
+            />
+          </label>
+
+          <label htmlFor="msg">
+            Message:
+            <textarea type="text" id="msg" onChange={this.change} />
+          </label>
+
+          <label htmlFor="email">
+            Email:
+            <input
+              type="text"
+              id="email"
+              placeholder="fredericdurand@sfr.fr"
+              value={email}
+              onChange={this.change}
+            />
+          </label>
+
+          <button type="button">Send</button>
         </form>
       </div>
     );
