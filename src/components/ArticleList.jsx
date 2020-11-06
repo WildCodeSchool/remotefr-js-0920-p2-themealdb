@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 import Article from './Article';
 import './Article.css';
 
-function ArticleList({ recipes }) {
+function ArticleList({ results }) {
+
   return (
     <div className="ArticleList">
-      {recipes.map((item) => (
+      {results.map((item) => (
         <Article
           key={item.idMeal}
           strTags={item.strTags || 'NO-TAG'}
@@ -20,7 +21,7 @@ function ArticleList({ recipes }) {
 }
 
 ArticleList.propTypes = {
-  recipes: PropTypes.objectOf(PropTypes.string).isRequired,
+  results: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 
 export default ArticleList;

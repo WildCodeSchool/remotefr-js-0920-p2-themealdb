@@ -1,13 +1,13 @@
 import React from 'react';
 import Carousel from 'react-elastic-carousel';
 import axios from 'axios';
-import ArticleList from './components/ArticleList';
-import RecipePage from './components/RecipePage';
-import './components/RecipePage.css';
 import Navbar from './components/Navbar';
+import SearchBar from './components/SearchBar';
 import Slider from './components/Slider';
+import RecipePage from './components/RecipePage';
 import ContactForm from './components/ContactForm';
 import './components/ContactForm.css';
+import './components/RecipePage.css';
 import './normalize.css';
 
 class App extends React.Component {
@@ -15,26 +15,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       recipe: null,
-      recipes: [],
     };
     this.getRecipe = this.getRecipe.bind(this);
-    this.getRandomRecipeList = this.getRandomRecipeList.bind(this);
-  }
-
-  componentDidMount() {
-    this.getRecipe();
-    this.getRandomRecipeList();
-  }
-
-  getRandomRecipeList() {
-    axios
-      .get('https://www.themealdb.com/api/json/v1/1/random.php')
-      .then((response) => response.data)
-      .then((data) => {
-        this.setState({
-          recipes: data.meals,
-        });
-      });
   }
 
   getRecipe() {
@@ -55,7 +37,7 @@ class App extends React.Component {
       { width: 768, slideShow: 3 },
       { width: 1200, slideShow: 4 },
     ];
-    const { recipe, recipes } = this.state;
+    const { recipe } = this.state;
     return (
       <div className="App">
         <Navbar />
@@ -69,7 +51,7 @@ class App extends React.Component {
           <Slider img="https://thumbs.dreamstime.com/b/chicken-jalfrazy-indian-food-recipe-spices-wooden-table-92742377.jpg" />
           <Slider img="https://www.recettes-asselin.com/img/fondue-chinoise.jpg" />
         </Carousel>
-        {recipes ? <ArticleList recipes={recipes} /> : <p>Loading...</p>}
+        <SearchBar />
         {recipe ? <RecipePage recipe={recipe} /> : <p>Loading...</p>}
         <button type="button" onClick={this.getRecipe}>
           Get random recipe
