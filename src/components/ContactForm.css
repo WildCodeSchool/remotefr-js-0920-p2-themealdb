@@ -14,10 +14,7 @@ textarea {
   border: 1px solid #f6cd3f;
   border-radius: 5px;
 }
-input:hover,
-textarea:hover {
-  cursor: text;
-}
+
 textarea {
   width: 250px;
   height: 120px;
