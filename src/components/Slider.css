@@ -3,7 +3,7 @@
 }
 .rec.rec-arrow {
   border-radius: 10%;
-  color: black;
+  color: #ed8d8d;
 }
 .rec.rec-dot.rec-dot_active.brcpxa {
   background-color: #ed8d8d;
@@ -16,11 +16,8 @@
 }
 .rec-arrow-right,
 .rec-arrow-left {
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  opacity: 50;
-  background-color: #393232;
+  background: linear-gradient(to bottom, #393232 5%, #393232 100%);
+  cursor: pointer;
 }
 .chowzb:hover:enabled,
 .chowzb:focus:enabled {

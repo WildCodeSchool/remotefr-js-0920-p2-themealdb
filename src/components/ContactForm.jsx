@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
 class App extends Component {
-  state = {
-    name: null,
-    age: null,
-    gender: null,
-  };
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: null,
+      age: null,
+      gender: null,
+    };
+  }
   change = (e) => {
     this.setState({
       [e.target.id]: e.target.value,
@@ -15,7 +17,6 @@ class App extends Component {
 
   submit = (e) => {
     e.preventDefault();
-    console.log(this.state);
   };
 
   render() {
