@@ -5,6 +5,8 @@ import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
 import Slider from './components/Slider';
 import RecipePage from './components/RecipePage';
+import ContactForm from './components/ContactForm';
+import './components/ContactForm.css';
 import './components/RecipePage.css';
 import './normalize.css';
 
@@ -54,6 +56,7 @@ class App extends React.Component {
         <button type="button" onClick={this.getRecipe}>
           Get random recipe
         </button>
+        <ContactForm />
       </div>
     );
   }

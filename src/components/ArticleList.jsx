@@ -5,6 +5,7 @@ import Article from './Article';
 import './Article.css';
 
 function ArticleList({ results }) {
+
   return (
     <div className="ArticleList">
       {results.map((item) => (
