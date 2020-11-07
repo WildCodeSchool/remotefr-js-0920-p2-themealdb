@@ -20,9 +20,9 @@ class App extends React.Component {
     this.getRecipe = this.getRecipe.bind(this);
   }
 
-  getRecipe() {
+  getRecipe(id) {
     axios
-      .get('https://www.themealdb.com/api/json/v1/1/random.php')
+      .get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
       .then((response) => response.data)
       .then((data) => {
         this.setState({
@@ -57,11 +57,12 @@ class App extends React.Component {
             <SearchBar />
             <ContactForm />
           </Route>
-          <Route path="/recipepage">
-            {recipe ? <RecipePage recipe={recipe} /> : <p>Loading...</p>}
-            <button type="button" onClick={this.getRecipe}>
+          <Route path="/:recipeLink">
+            {/* {recipe ? <RecipePage recipe={recipe} /> : <p>Loading...</p>} */}
+            {recipe ? <RecipePage recipe={recipe} /> : this.getRecipe(52772)}
+            {/* <button type="button" onClick={this.getRecipe}>
               Get random recipe
-            </button>
+            </button> */}
           </Route>
         </Switch>
       </div>
