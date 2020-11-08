@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React from 'react';
 import Carousel from 'react-elastic-carousel';
 import axios from 'axios';
@@ -58,11 +59,11 @@ class App extends React.Component {
             <ContactForm />
           </Route>
           <Route path="/:recipeLink">
-            {/* {recipe ? <RecipePage recipe={recipe} /> : <p>Loading...</p>} */}
-            {recipe ? <RecipePage recipe={recipe} /> : this.getRecipe(52772)}
-            {/* <button type="button" onClick={this.getRecipe}>
-              Get random recipe
-            </button> */}
+            {recipe ? (
+              <RecipePage recipe={recipe} getRecipe={this.getRecipe} />
+            ) : (
+              this.getRecipe(52772)
+            )}
           </Route>
         </Switch>
       </div>
