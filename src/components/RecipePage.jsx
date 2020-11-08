@@ -1,26 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-/// //// Tests ==> raccourcir création tableau ///////
-
-// const recipeArray = Object.entries(recipe);
-
-// const k = 'recipe.strIngredient';
-
-// // eslint-disable-next-line prefer-const
-// let ingredient = 'test';
-
-// for (let i = 1; i < 20; i += 1) {
-//   // eslint-disable-next-line prefer-template
-//   // eslint-disable-next-line no-eval
-//   eval('let ' + ingredient + ' = ' + k + i + ';');
-//   ingredientsArray.push({ ingredient });
-// }
-
-/// //////////////////////////////////////////////
-function RecipePage({ recipe, getRecipe }, props) {
-  console.log(props);
-
+function RecipePage({ recipe, getRecipe, link }) {
   const ingredientsArray = [
     recipe.strIngredient1,
     recipe.strIngredient2,
@@ -68,7 +49,7 @@ function RecipePage({ recipe, getRecipe }, props) {
   ];
 
   return (
-    getRecipe(52787),
+    getRecipe(Number(link)),
     (
       <div className="RecipePage">
         <h1>{recipe.strMeal}</h1>
@@ -110,6 +91,7 @@ function RecipePage({ recipe, getRecipe }, props) {
 RecipePage.propTypes = {
   recipe: PropTypes.objectOf(PropTypes.string).isRequired,
   getRecipe: PropTypes.func.isRequired,
+  link: PropTypes.string.isRequired,
 };
 
 export default RecipePage;
