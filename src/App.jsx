@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-props-no-spreading */
+
 import React from 'react';
 import Carousel from 'react-elastic-carousel';
 import axios from 'axios';
@@ -20,9 +22,9 @@ class App extends React.Component {
     this.getRecipe = this.getRecipe.bind(this);
   }
 
-  getRecipe() {
+  getRecipe(id) {
     axios
-      .get('https://www.themealdb.com/api/json/v1/1/random.php')
+      .get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
       .then((response) => response.data)
       .then((data) => {
         this.setState({
@@ -57,12 +59,16 @@ class App extends React.Component {
             <SearchBar />
             <ContactForm />
           </Route>
-          <Route path="/recipepage">
-            {recipe ? <RecipePage recipe={recipe} /> : <p>Loading...</p>}
-            <button type="button" onClick={this.getRecipe}>
-              Get random recipe
-            </button>
-          </Route>
+          <Route
+            path="/recipe/:recipeLink"
+            render={(props) => (
+              <RecipePage
+                link={props.match.params.recipeLink}
+                recipe={recipe}
+                getRecipe={this.getRecipe}
+              />
+            )}
+          />
         </Switch>
       </div>
     );
