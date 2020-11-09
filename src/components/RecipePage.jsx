@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function RecipePage({ recipe, getRecipe, link }) {
-  if (recipe === null) {
+  if (recipe === null || recipe.idMeal !== link) {
     getRecipe(Number(link));
     return <p>Loading</p>;
   }
