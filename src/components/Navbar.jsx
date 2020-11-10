@@ -1,21 +1,24 @@
 import React from 'react';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
     <nav className="navbar">
-      <img
-        src="https://cdn.discordapp.com/attachments/768398692226433034/771658707343769610/pexels-photo-1070880.png"
-        alt="logo"
-        className="navbar-logo"
-      />
+      <Link to="/">
+        <img
+          src="https://cdn.discordapp.com/attachments/768398692226433034/771658707343769610/pexels-photo-1070880.png"
+          alt="logo"
+          className="navbar-logo"
+        />
+      </Link>
       <div className="menucenter">
         <ul>
           <li>
-            <a href="/contact">Contact</a>
+            <Link to="/contact-form">Contact</Link>
           </li>
           <li>
-            <a href="/whoAreWe">Who are we ?</a>
+            <Link to="/who-are-we">Who are we ?</Link>
           </li>
         </ul>
         <div className="title">

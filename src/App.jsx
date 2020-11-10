@@ -7,6 +7,7 @@ import { Route, Switch } from 'react-router-dom';
 import RecipePage from './components/RecipePage';
 import './components/RecipePage.css';
 import Navbar from './components/Navbar';
+import WhoAreWe from './components/WhoAreWe';
 import SearchBar from './components/SearchBar';
 import Slider from './components/Slider';
 import ContactForm from './components/ContactForm';
@@ -58,6 +59,12 @@ class App extends React.Component {
             </Carousel>
             <SearchBar />
             <ContactForm />
+          </Route>
+          <Route path="/contact-form">
+            <ContactForm />
+          </Route>
+          <Route path="/who-are-we">
+            <WhoAreWe />
           </Route>
           <Route
             path="/recipe/:recipeLink"

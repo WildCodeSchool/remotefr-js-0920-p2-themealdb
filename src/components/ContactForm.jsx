@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class App extends Component {
+class ContactForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,48 +24,26 @@ class App extends Component {
     const { lastName, name, email } = this.state;
     return (
       <div>
+        <h2>Contact :</h2>
         <form onSubmit={this.submit}>
-          <label htmlFor="name">
-            Last name:
-            <input
-              type="text"
-              id="lastName"
-              value={lastName}
-              onChange={this.change}
-            />
-          </label>
-
-          <label htmlFor="firstName">
-            First Name:
-            <input
-              type="text"
-              id="firstName"
-              value={name}
-              valueonChange={this.change}
-            />
-          </label>
-
-          <label htmlFor="msg">
-            Message:
-            <textarea type="text" id="msg" onChange={this.change} />
-          </label>
-
-          <label htmlFor="email">
-            Email:
-            <input
-              type="text"
-              id="email"
-              placeholder="fredericdurand@sfr.fr"
-              value={email}
-              onChange={this.change}
-            />
-          </label>
-
-          <button type="button">Send</button>
+          <label htmlFor="name">Name:</label>
+          <input type="text" id="name" onChange={this.change} />
+          <label htmlFor="firstName">First Name:</label>
+          <input type="text" id="firstName" onChange={this.change} />
+          <label htmlFor="msg">Message:</label>
+          <textarea type="text" id="msg" onChange={this.change} />
+          <label htmlFor="email">Email:</label>
+          <input
+            type="text"
+            id="email"
+            placeholder="fredericdurand@sfr.fr"
+            onChange={this.change}
+          />
+          <button>Send</button>
         </form>
       </div>
     );
   }
 }
 
-export default App;
+export default ContactForm;
