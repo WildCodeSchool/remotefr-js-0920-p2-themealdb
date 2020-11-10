@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 
-class App extends Component {
-  state = {
-    name: null,
-    age: null,
-    gender: null,
-  };
+class ContactForm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      lastName: null,
+      name: null,
+      email: null,
+    };
+  }
 
   change = (e) => {
     this.setState({
@@ -15,10 +18,10 @@ class App extends Component {
 
   submit = (e) => {
     e.preventDefault();
-    console.log(this.state);
   };
 
   render() {
+    const { lastName, name, email } = this.state;
     return (
       <div>
         <h2>Contact :</h2>
@@ -43,4 +46,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default ContactForm;
