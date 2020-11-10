@@ -25,10 +25,18 @@
 
 .SearchIcon {
   position: absolute;
-  top: 2px;
-  right: 10px;
+  top: 7px;
+  right: 5px;
   font-size: 20px;
   color: #ed8d8d;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: transparent;
+}
+
+.SearchIcon:hover {
+  color: #4d4545;
 }
 
 /* RESULT CONTAINER */

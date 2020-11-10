@@ -41,7 +41,10 @@ class SearchBar extends React.Component {
       );
   }
 
-  fetchSearchResults = (query) => {
+  /* MESSAGE SEARCHBAR */
+
+  handleSubmit = (event) => {
+    const { query } = this.state;
     const searchUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`;
     if (this.cancel) {
       this.cancel.cancel();
@@ -70,25 +73,20 @@ class SearchBar extends React.Component {
           });
         }
       });
+    event.preventDefault();
   };
 
-  handleOnInputChange = (event) => {
-    const query = event.target.value;
-    if (!query) {
-      this.setState({ query, results: {}, message: '' });
-    } else {
-      this.setState(
-        {
-          query,
-          loading: true,
-          message: '',
-        },
-        () => {
-          this.fetchSearchResults(query);
-        },
-      );
-    }
+  /* BUTTON SEARCHBAR */
+
+  handleChange = (event) => {
+    const inputField = event.target;
+    const newValue = inputField.value;
+    this.setState({
+      query: newValue,
+    });
   };
+
+  /* RESULTS SEARCHBAR */
 
   renderSearchResults = () => {
     const { results } = this.state;
@@ -108,17 +106,21 @@ class SearchBar extends React.Component {
     return (
       <div className="SearchBar">
         {/* Search Input */}
-        <label className="SearchLabel" htmlFor="search-input">
-          <input
-            type="text"
-            name="query"
-            value={query}
-            id="search-input"
-            placeholder="Search Meal..."
-            onChange={this.handleOnInputChange}
-          />
-          <i className="fas fa-search SearchIcon" />
-        </label>
+        <form onSubmit={this.handleSubmit}>
+          <label className="SearchLabel" htmlFor="search-input">
+            <input
+              type="text"
+              name="query"
+              value={query}
+              id="search-input"
+              placeholder="Search Meal..."
+              onChange={this.handleChange}
+            />
+            <button type="submit" className="SearchIcon">
+              <i className="fas fa-search" />
+            </button>
+          </label>
+        </form>
         {/* Error Message */}
         {message && <p className="Message">{message}</p>}
         {/* Loader GIF */}
