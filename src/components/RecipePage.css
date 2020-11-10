@@ -26,3 +26,9 @@
 .Ingredients {
   padding-bottom: 2rem;
 }
+
+.Measures,
+.Ingredients {
+  color: black;
+  text-justify: auto;
+}
