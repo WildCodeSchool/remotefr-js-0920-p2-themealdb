@@ -1,3 +1,5 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable no-alert */
 import React from 'react';
 import axios from 'axios';
 import Loader from '../loader.gif';
@@ -12,6 +14,8 @@ class SearchBar extends React.Component {
       results: {},
       loading: false,
       message: '',
+      activeSearch: 'search.php?s=',
+      searchStatus: true,
     };
     this.getRandomRecipeList = this.getRandomRecipeList.bind(this);
     this.cancel = '';
@@ -76,6 +80,10 @@ class SearchBar extends React.Component {
     event.preventDefault();
   };
 
+  changeFilter = () => {
+    alert(`test ${this.state.activeSearch} ${this.state.searchStatus}`);
+  };
+
   /* BUTTON SEARCHBAR */
 
   handleChange = (event) => {
@@ -116,6 +124,9 @@ class SearchBar extends React.Component {
               placeholder="Search Meal..."
               onChange={this.handleChange}
             />
+            <button onClick={this.changeFilter} type="button">
+              test
+            </button>
             <button type="submit" className="SearchIcon">
               <i className="fas fa-search" />
             </button>
