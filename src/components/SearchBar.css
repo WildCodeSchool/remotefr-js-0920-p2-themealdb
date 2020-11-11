@@ -17,6 +17,7 @@
   box-sizing: border-box;
   outline: none;
   border-color: #ed8d8d;
+  cursor: auto;
 }
 
 .SearchBar input::placeholder {
