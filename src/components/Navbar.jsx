@@ -15,10 +15,16 @@ function Navbar() {
       <div className="menucenter">
         <ul>
           <li>
-            <Link to="/contact-form">Contact</Link>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/meal-area">Meal by Area</Link>
           </li>
           <li>
             <Link to="/who-are-we">Who are we ?</Link>
+          </li>
+          <li>
+            <Link to="/contact-form">Contact</Link>
           </li>
         </ul>
         <div className="title">
