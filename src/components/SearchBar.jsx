@@ -1,5 +1,3 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable no-alert */
 import React from 'react';
 import axios from 'axios';
 import Loader from '../loader.gif';
@@ -81,8 +79,7 @@ class SearchBar extends React.Component {
   };
 
   changeFilter = () => {
-    const { activeSearch, searchStatus } = this.state;
-    alert(`${activeSearch} ${searchStatus}`);
+    const { searchStatus } = this.state;
     if (searchStatus) {
       this.setState({
         activeSearch: 'filter.php?i=',
