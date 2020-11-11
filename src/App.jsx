@@ -9,6 +9,7 @@ import './components/RecipePage.css';
 import Navbar from './components/Navbar';
 import WhoAreWe from './components/WhoAreWe';
 import SearchBar from './components/SearchBar';
+import Mealarea from './components/Mealarea';
 import Slider from './components/Slider';
 import ContactForm from './components/ContactForm';
 import './components/ContactForm.css';
@@ -76,6 +77,9 @@ class App extends React.Component {
               />
             )}
           />
+          <Route path="/meal-area">
+            <Mealarea />
+          </Route>
         </Switch>
       </div>
     );
