@@ -48,8 +48,8 @@ class SearchBar extends React.Component {
   /* MESSAGE SEARCHBAR */
 
   handleSubmit = (event) => {
-    const { query } = this.state;
-    const searchUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`;
+    const { query, activeSearch } = this.state;
+    const searchUrl = `https://www.themealdb.com/api/json/v1/1/${activeSearch}${query}`;
     if (this.cancel) {
       this.cancel.cancel();
     }
@@ -81,7 +81,19 @@ class SearchBar extends React.Component {
   };
 
   changeFilter = () => {
-    alert(`test ${this.state.activeSearch} ${this.state.searchStatus}`);
+    const { activeSearch, searchStatus } = this.state;
+    alert(`${activeSearch} ${searchStatus}`);
+    if (searchStatus) {
+      this.setState({
+        activeSearch: 'filter.php?i=',
+        searchStatus: !searchStatus,
+      });
+    } else {
+      this.setState({
+        activeSearch: 'search.php?s=',
+        searchStatus: !searchStatus,
+      });
+    }
   };
 
   /* BUTTON SEARCHBAR */
