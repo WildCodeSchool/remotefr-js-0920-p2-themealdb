@@ -21,7 +21,7 @@ class Mealarea extends React.Component {
       .then((response) => response.data)
       .then((data) => {
         this.setState({
-          areas: data.meals[0],
+          areas: data.meals,
         });
       });
   }
@@ -30,12 +30,18 @@ class Mealarea extends React.Component {
     const { areas } = this.state;
     return (
       <div className="MealArea">
-        <h2>Search by Area Meal :</h2>
-        <ul>
-          {areas.map((area) => (
-            <li key={area.strArea}>{area.strArea}</li>
-          ))}
-        </ul>
+        {areas === [] ? (
+          <p>Loading</p>
+        ) : (
+          <div>
+            <h2>Search by Area Meal :</h2>
+            <ul>
+              {areas.map((area) => (
+                <li key={area.strArea}>{area.strArea}</li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     );
   }
