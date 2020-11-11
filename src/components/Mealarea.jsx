@@ -30,18 +30,12 @@ class Mealarea extends React.Component {
     const { areas } = this.state;
     return (
       <div className="MealArea">
-        {areas === [] ? (
-          <p>Loading</p>
-        ) : (
-          <div>
-            <h2>Search by Area Meal :</h2>
-            <ul>
-              {areas.map((area) => (
-                <li key={area.strArea}>{area.strArea}</li>
-              ))}
-            </ul>
-          </div>
-        )}
+        <h2>Search by Area Meal :</h2>
+        <ul>
+          {areas.map((area) => (
+            <li key={area.strArea}>{area.strArea}</li>
+          ))}
+        </ul>
       </div>
     );
   }
