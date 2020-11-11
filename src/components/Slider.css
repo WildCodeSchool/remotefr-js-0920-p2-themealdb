@@ -23,3 +23,9 @@
 .chowzb:focus:enabled {
   background-color: #393232;
 }
+
+button.ikyGAt:hover,
+button.ikyGAt:focus {
+  cursor: pointer;
+  box-shadow: 0 0 1px 3px #ed8d8d;
+}
