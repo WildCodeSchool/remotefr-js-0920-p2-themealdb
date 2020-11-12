@@ -35,7 +35,7 @@ class Mealarea extends React.Component {
         <ul>
           {areas.map((area) => (
             <li key={area.strArea}>
-              <FlagImg />
+              <FlagImg area={area.strArea} />
               {area.strArea}
             </li>
           ))}

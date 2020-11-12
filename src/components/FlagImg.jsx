@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const flag = [
+const flags = [
   {
     image: 'https://www.countryflags.io/us/shiny/64.png',
     name: 'American',
@@ -94,19 +95,26 @@ const flag = [
     name: 'Turkish',
   },
   {
+    image: 'https://www.countryflags.io/tm/shiny/64.png',
+    name: 'Unknown',
+  },
+  {
     image: 'https://www.countryflags.io/vn/shiny/64.png',
     name: 'Vietnamese',
   },
-  {
-    name: 'Unknow',
-  },
 ];
+function FlagImg(props) {
+  const flag = flags.find((imgFlag) => imgFlag.name === props.area);
 
-const FlagImg = () => (
-  <div>
-    {flag.map((imgflag) => (
-      <img src={imgflag.image} alt="" />
-    ))}
-  </div>
-);
+  return (
+    <div>
+      <img src={flag.image} alt={flag.name} />
+    </div>
+  );
+}
+
+FlagImg.propTypes = {
+  area: PropTypes.string.isRequired,
+};
+
 export default FlagImg;
