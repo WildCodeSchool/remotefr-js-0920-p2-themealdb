@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './FlagImg.css';
 
 const flags = [
   {
@@ -107,7 +108,7 @@ function FlagImg(props) {
   const flag = flags.find((imgFlag) => imgFlag.name === props.area);
 
   return (
-    <div>
+    <div className="FlagImg">
       <img src={flag.image} alt={flag.name} />
     </div>
   );
