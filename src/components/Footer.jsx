@@ -14,10 +14,6 @@ const reseauxSociaux = [
     link: 'Instagram.com',
     title: 'Instagram',
   },
-  {
-    link: 'LinkedIn.com',
-    title: 'LinkedIn',
-  },
 ];
 
 function Footer() {
