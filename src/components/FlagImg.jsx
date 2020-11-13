@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './FlagImg.css';
 
 const flags = [
   {
@@ -96,7 +95,7 @@ const flags = [
     name: 'Turkish',
   },
   {
-    image: 'https://www.countryflags.io/tm/shiny/64.png',
+    image: 'https://i.ibb.co/MgtW0nR/unknown.png',
     name: 'Unknown',
   },
   {
