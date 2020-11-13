@@ -13,14 +13,16 @@
   padding: 10px;
   font-size: 18px;
   font-style: italic;
-  color: #ed8d8d;
+  color: #bf3604;
   box-sizing: border-box;
   outline: none;
-  border-color: #ed8d8d;
+  border-color: #bf3604;
+  cursor: auto;
+  background-color: #f27405;
 }
 
 .SearchBar input::placeholder {
-  color: #ed8d8d;
+  color: #bf3604;
 }
 
 .SearchIcon {
@@ -28,7 +30,7 @@
   top: 7px;
   right: 5px;
   font-size: 20px;
-  color: #ed8d8d;
+  color: #bf3604;
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -36,23 +38,7 @@
 }
 
 .SearchIcon:hover {
-  color: #4d4545;
-}
-
-/* RESULT CONTAINER */
-
-.Results {
-  display: flex;
-  flex-flow: wrap;
-}
-
-.ResultsItem {
-  position: relative;
-  padding: 16px;
-  border: 1px solid #898989;
-  margin: 16px;
-  text-align: center;
-  min-width: 200px;
+  color: #f6aa1c;
 }
 
 /* LOADER */

@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import FlagImg from './FlagImg';
 import './Mealarea.css';
 
 class Mealarea extends React.Component {
@@ -21,7 +22,7 @@ class Mealarea extends React.Component {
       .then((response) => response.data)
       .then((data) => {
         this.setState({
-          areas: data.meals[0],
+          areas: data.meals,
         });
       });
   }
@@ -33,7 +34,10 @@ class Mealarea extends React.Component {
         <h2>Search by Area Meal :</h2>
         <ul>
           {areas.map((area) => (
-            <li key={area.strArea}>{area.strArea}</li>
+            <li key={area.strArea}>
+              <FlagImg area={area.strArea} />
+              {area.strArea}
+            </li>
           ))}
         </ul>
       </div>

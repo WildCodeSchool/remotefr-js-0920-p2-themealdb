@@ -82,7 +82,6 @@ class App extends React.Component {
               ))}
             </Carousel>
             <SearchBar />
-            <ContactForm />
           </Route>
           <Route path="/contact-form">
             <ContactForm />
