@@ -59,7 +59,6 @@ class App extends React.Component {
           recipe: data.meals[0],
         });
       });
-    this.getSlider = this.getSlider.bind(this);
   }
 
   render() {

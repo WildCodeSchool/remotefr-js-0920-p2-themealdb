@@ -1,34 +1,52 @@
 .RecipePage {
-  background-color: #4d4545;
+  background-color: #bf3604;
+  padding: 2rem 7rem;
+  margin: 10rem;
+  border-radius: 41px;
 }
 .RecipePage h1 {
-  color: #ed8d8d;
+  color: #220901;
+  padding-top: 2rem;
 }
 
 .Recipe {
+  border-radius: 41px;
+  background: #bf3604;
+  box-shadow: -21px 21px 42px #671d02, 21px -21px 42px #ff4f06;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   padding: 2rem 5rem;
+  margin: 5rem;
+  align-items: center;
+}
+
+.Ingredients {
+  color: #220901;
 }
 
 .ImgRecipe {
   padding-bottom: 2rem;
-  max-height: 150px;
-  max-width: 150px;
+  max-height: 200px;
+  max-width: 200px;
 }
 
 .ImgRecipe img {
-  max-height: 150px;
-  max-width: 150px;
+  max-height: 200px;
+  max-width: 200px;
+  border-radius: 41px;
+  background: linear-gradient(225deg, #cc3a04, #ac3104);
+  box-shadow: -16px 16px 31px #671d02, 16px -16px 31px #ff4f06;
 }
 
-.Ingredients {
-  padding-bottom: 2rem;
-}
-
-.Measures,
-.Ingredients {
-  color: black;
-  text-justify: auto;
+.Instructions {
+  border-radius: 41px;
+  background: #bf3604;
+  box-shadow: -21px 21px 42px #671d02, 21px -21px 42px #ff4f06;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 5rem;
+  margin: 5rem;
+  align-items: center;
+  font-size: 20px;
+  color: #220901;
 }
