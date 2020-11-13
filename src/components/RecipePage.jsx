@@ -64,7 +64,6 @@ function RecipePage({ recipe, getRecipe, link }) {
             <ul>
               {ingredientsArray.map((ingredient, i) => {
                 if (ingredient !== null && ingredient !== '') {
-                  // eslint-disable-next-line react/no-array-index-key
                   return (
                     <li key={`${ingredient}`}>
                       {`${ingredient} : ${measuresArray[i]}`}
@@ -73,13 +72,6 @@ function RecipePage({ recipe, getRecipe, link }) {
                 }
                 return false;
               })}
-              {/* // // {measuresArray.map((measure, i) => {
-              //   if (measure !== null && measure !== '') {
-              //     // eslint-disable-next-line react/no-array-index-key
-              //     return <li key={`${i}-measure`}>{measure}</li>;
-              //   }
-              //   return false;
-              // })} */}
             </ul>
           </div>
         </div>
