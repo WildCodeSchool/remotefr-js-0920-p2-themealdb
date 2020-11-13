@@ -12,6 +12,7 @@ import SearchBar from './components/SearchBar';
 import Mealarea from './components/Mealarea';
 import Slider from './components/Slider';
 import ContactForm from './components/ContactForm';
+import Footer from './components/Footer';
 import './components/ContactForm.css';
 import './normalize.css';
 
@@ -103,6 +104,7 @@ class App extends React.Component {
             <Mealarea />
           </Route>
         </Switch>
+        <Footer />
       </div>
     );
   }
