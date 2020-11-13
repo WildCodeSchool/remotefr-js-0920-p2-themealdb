@@ -65,26 +65,26 @@ function RecipePage({ recipe, getRecipe, link }) {
               {ingredientsArray.map((ingredient, i) => {
                 if (ingredient !== null && ingredient !== '') {
                   // eslint-disable-next-line react/no-array-index-key
-                  return <li key={`${i}-ingredient`}>{ingredient}</li>;
+                  return (
+                    <li key={`${ingredient}`}>
+                      {`${ingredient} : ${measuresArray[i]}`}
+                    </li>
+                  );
                 }
                 return false;
               })}
+              {/* // // {measuresArray.map((measure, i) => {
+              //   if (measure !== null && measure !== '') {
+              //     // eslint-disable-next-line react/no-array-index-key
+              //     return <li key={`${i}-measure`}>{measure}</li>;
+              //   }
+              //   return false;
+              // })} */}
             </ul>
           </div>
-          <div className="Measures">
-            <ul>
-              {measuresArray.map((measure, i) => {
-                if (measure !== null && measure !== '') {
-                  // eslint-disable-next-line react/no-array-index-key
-                  return <li key={`${i}-measure`}>{measure}</li>;
-                }
-                return false;
-              })}
-            </ul>
-          </div>
-          <div className="Instructions">
-            <p>{recipe.strInstructions}</p>
-          </div>
+        </div>
+        <div className="Instructions">
+          <p>{recipe.strInstructions}</p>
         </div>
       </div>
     );
