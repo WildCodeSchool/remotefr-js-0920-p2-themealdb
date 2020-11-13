@@ -1,21 +1,30 @@
-label {
+body {
+  background-color: #f6aa1c;
+}
+
+.ContactForm label {
   display: block;
   margin-top: 20px;
   text-align: center;
+  color: #220901;
 }
 
-input,
+.ContactForm input,
 textarea {
   width: 200px;
   padding: 3px;
   font: 1em sans-serif;
   cursor: pointer;
-  background-color: #8d6262;
-  border: 1px solid #f6cd3f;
+  background-color: #f27405;
+  border: 1px solid #220901;
   border-radius: 5px;
 }
 
-textarea {
+.ContactForm textarea {
   width: 250px;
   height: 120px;
+}
+
+.ContactForm h2 {
+  color: #220901;
 }
