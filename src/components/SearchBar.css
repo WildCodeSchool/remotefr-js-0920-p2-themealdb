@@ -16,9 +16,10 @@
   color: #bf3604;
   box-sizing: border-box;
   outline: none;
-  border-color: #bf3604;
+  border: 2px solid #bf3604;
   cursor: auto;
   background-color: #f27405;
+  border-radius: 5px;
 }
 
 .SearchBar input::placeholder {
@@ -27,8 +28,8 @@
 
 .SearchIcon {
   position: absolute;
-  top: 7px;
-  right: 5px;
+  top: -2px;
+  right: -680px;
   font-size: 20px;
   color: #bf3604;
   cursor: pointer;
