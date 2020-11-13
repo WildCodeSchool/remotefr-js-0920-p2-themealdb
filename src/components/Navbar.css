@@ -25,8 +25,7 @@
   display: flex;
   justify-content: space-around;
 }
-
-.navbar li {
+git .navbar li {
   display: inline-block;
   margin-left: 50px;
   font-size: 1.4em;

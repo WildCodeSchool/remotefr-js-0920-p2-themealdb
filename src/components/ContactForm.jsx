@@ -23,7 +23,7 @@ class ContactForm extends Component {
   render() {
     const { firstName, name, email } = this.state;
     return (
-      <div>
+      <div className="ContactForm">
         <h2>Contact :</h2>
         <form onSubmit={this.submit}>
           <label htmlFor="name">
