@@ -17,3 +17,20 @@
   flex-direction: column;
   align-items: center;
 }
+
+/* NO-STYLE */
+
+.btnMealarea {
+  outline: transparent;
+  color: #220901;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btnMealarea:hover {
+  -webkit-transition: all 0.5s 0s ease;
+  -moz-transition: all 0.5s 0s ease;
+  -o-transition: all 0.5s 0s ease;
+  transition: all 0.5s 0s ease;
+}
