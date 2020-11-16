@@ -13,6 +13,7 @@ import Mealarea from './components/Mealarea';
 import Slider from './components/Slider';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
+import FavoritePage from './components/FavoritePage';
 import './components/ContactForm.css';
 import './normalize.css';
 
@@ -100,6 +101,9 @@ class App extends React.Component {
           />
           <Route path="/meal-area">
             <Mealarea />
+          </Route>
+          <Route path="/fav">
+            <FavoritePage />
           </Route>
         </Switch>
         <Footer />
