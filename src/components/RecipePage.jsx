@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './RecipePage.css';
 
 function RecipePage({ recipe, getRecipe, link }) {
   if (recipe === null || recipe.idMeal !== link) {

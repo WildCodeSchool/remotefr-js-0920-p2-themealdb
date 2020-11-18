@@ -1,11 +1,11 @@
 .MealArea h2 {
   margin-left: 5em;
   margin-bottom: 2em;
-  color: #220901;
+  color: #797876;
 }
 
 .MealArea ul {
-  color: #220901;
+  color: #797876;
   display: flex;
   flex-wrap: wrap;
   align-items: center;

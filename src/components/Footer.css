@@ -1,5 +1,5 @@
 .Footer ul {
-  background-color: #f6aa1c;
+  background-color: #434343;
   margin: 0px;
   padding: 0px;
   list-style: none;
@@ -10,6 +10,7 @@
 }
 
 .Footer a {
+  color: #f46263;
   padding: 1em;
   display: block;
   text-align: center;
