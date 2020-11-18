@@ -12,6 +12,7 @@ function ArticleList({ results }) {
         <Link to={`recipe/${item.idMeal}`}>
           <Article
             key={item.idMeal}
+            id={item.idMeal}
             strTags={item.strTags || 'NO-TAG'}
             strMealThumb={item.strMealThumb}
             strMeal={item.strMeal}
