@@ -1,14 +1,14 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import axios from 'axios';
-// import ArticleList from './ArticleList';
+import ArticleList from './ArticleList';
 
 class FavoritePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       favorites: ['52772', '52773'],
-      // favArray: null,
+      favArray: null,
     };
   }
 
@@ -19,21 +19,23 @@ class FavoritePage extends React.Component {
         this.state.favorites.map((fav) =>
           axios
             .get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${fav}`)
-            .then((res) => res.data),
+            .then((res) => res.data.meals[0]),
         ),
       )
       .then((data) => {
-        return console.log(data);
+        this.setState({
+          favArray: data,
+        });
       });
   }
 
   render() {
-    // const { favArray } = this.state;
+    const { favArray } = this.state;
 
     return (
       <div>
         <p>This is a favorites page</p>
-        {/* <ArticleList fav={favArray} /> */}
+        {favArray ? <ArticleList results={favArray} /> : <p>Loading</p>}
       </div>
     );
   }
