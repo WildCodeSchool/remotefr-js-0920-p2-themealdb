@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import './Article.css';
 
 class Article extends React.Component {
@@ -20,7 +21,9 @@ class Article extends React.Component {
       <figure className="Article">
         <img src={strMealThumb} alt={strMeal} />
         <figcaption>
-          <h2>{` ${strMeal} et ${id}`}</h2>
+          <Link to={`recipe/${id}`}>
+            <h2>{`${strMeal} et ${id}`}</h2>
+          </Link>
           <blockquote>
             Tag:
             {tags.map((tag) => {
@@ -39,6 +42,7 @@ class Article extends React.Component {
             onClick={() => {
               const newFavorite = !favorite;
               this.setState({ favorite: newFavorite });
+              localStorage.setItem('favorites', id);
             }}
           >
             &#9733;
