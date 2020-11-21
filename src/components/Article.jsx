@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -7,8 +6,9 @@ import './Article.css';
 class Article extends React.Component {
   constructor(props) {
     super(props);
+    const { id } = this.props;
     this.state = {
-      favorite: false,
+      favorite: localStorage.getItem(id) === id,
     };
   }
 
@@ -40,9 +40,17 @@ class Article extends React.Component {
             type="button"
             className={favorite ? 'is-favorite' : ''}
             onClick={() => {
-              const newFavorite = !favorite;
-              this.setState({ favorite: newFavorite });
-              localStorage.setItem('favorites', id);
+              if (localStorage.getItem(id) === id) {
+                localStorage.removeItem(id);
+                this.setState({
+                  favorite: false,
+                });
+              } else {
+                localStorage.setItem(id, id);
+                this.setState({
+                  favorite: true,
+                });
+              }
             }}
           >
             &#9733;
