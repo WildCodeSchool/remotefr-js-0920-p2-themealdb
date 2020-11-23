@@ -133,15 +133,13 @@ class SearchBar extends React.Component {
               placeholder="Search Meal..."
               onChange={this.handleChange}
             />
-            <p>
-              Appuyer sur le bouton pour changer le style de recherche ACTIVE
-            </p>
+            <p>Search by :</p>
             <button
               className="searchButton"
               onClick={this.changeFilter}
               type="button"
             >
-              {searchStatus ? 'Selon le nom' : "Selon l'ingrédient principal"}
+              {searchStatus ? 'Name' : 'Ingredient'}
             </button>
             <button type="submit" className="SearchIcon">
               <i className="fas fa-search" />

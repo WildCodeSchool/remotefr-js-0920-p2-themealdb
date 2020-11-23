@@ -2,6 +2,7 @@
   margin-left: 5em;
   margin-bottom: 2em;
   color: #797876;
+  text-decoration: underline;
 }
 
 .MealArea ul {
@@ -16,6 +17,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.container-title-flag {
+  margin-bottom: 5em;
 }
 
 /* NO-STYLE */

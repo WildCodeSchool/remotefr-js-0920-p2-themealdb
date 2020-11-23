@@ -89,20 +89,22 @@ class Mealarea extends React.Component {
     const { areas, message, loading } = this.state;
     return (
       <div className="MealArea">
-        <h2>Search by Area Meal :</h2>
+        <div className="container-title-flag">
+          <h2>Search by Area Meal :</h2>
 
-        <ul>
-          {areas.map((area) => (
-            <li key={area.strArea}>
-              <FlagImg
-                area={area.strArea}
-                // key={'flag' + '{area.strArea}'}
-                getListFromNat={this.getListFromNat}
-              />
-              {area.strArea}
-            </li>
-          ))}
-        </ul>
+          <ul>
+            {areas.map((area) => (
+              <li key={area.strArea}>
+                <FlagImg
+                  area={area.strArea}
+                  // key={'flag' + '{area.strArea}'}
+                  getListFromNat={this.getListFromNat}
+                />
+                {area.strArea}
+              </li>
+            ))}
+          </ul>
+        </div>
         {/* Error Message */}
         {message && <p className="Message">{message}</p>}
         {/* Loader GIF */}
