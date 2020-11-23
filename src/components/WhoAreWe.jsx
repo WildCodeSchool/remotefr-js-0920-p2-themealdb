@@ -14,6 +14,10 @@ function WhoAreWe() {
         <br /> the idea came to us of creating a second site which allow us to
         list thousands of different recipes.
       </p>
+      <p>
+        Here is our team of enthusiasts : - Cédric Priouret - Matisse Famularo -
+        Miguel Santos - Christophe Castan
+      </p>
     </div>
   );
 }
