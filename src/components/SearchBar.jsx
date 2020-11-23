@@ -12,6 +12,8 @@ class SearchBar extends React.Component {
       results: {},
       loading: false,
       message: '',
+      activeSearch: 'search.php?s=',
+      searchStatus: true,
     };
     this.getRandomRecipeList = this.getRandomRecipeList.bind(this);
     this.cancel = '';
@@ -44,8 +46,8 @@ class SearchBar extends React.Component {
   /* MESSAGE SEARCHBAR */
 
   handleSubmit = (event) => {
-    const { query } = this.state;
-    const searchUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`;
+    const { query, activeSearch } = this.state;
+    const searchUrl = `https://www.themealdb.com/api/json/v1/1/${activeSearch}${query}`;
     if (this.cancel) {
       this.cancel.cancel();
     }
@@ -76,6 +78,21 @@ class SearchBar extends React.Component {
     event.preventDefault();
   };
 
+  changeFilter = () => {
+    const { searchStatus } = this.state;
+    if (searchStatus) {
+      this.setState({
+        activeSearch: 'filter.php?i=',
+        searchStatus: !searchStatus,
+      });
+    } else {
+      this.setState({
+        activeSearch: 'search.php?s=',
+        searchStatus: !searchStatus,
+      });
+    }
+  };
+
   /* BUTTON SEARCHBAR */
 
   handleChange = (event) => {
@@ -101,7 +118,7 @@ class SearchBar extends React.Component {
   };
 
   render() {
-    const { query, loading, message } = this.state;
+    const { query, loading, message, searchStatus } = this.state;
 
     return (
       <div className="SearchBar">
@@ -116,6 +133,16 @@ class SearchBar extends React.Component {
               placeholder="Search Meal..."
               onChange={this.handleChange}
             />
+            <p>
+              Appuyer sur le bouton pour changer le style de recherche ACTIVE
+            </p>
+            <button
+              className="searchButton"
+              onClick={this.changeFilter}
+              type="button"
+            >
+              {searchStatus ? 'Selon le nom' : "Selon l'ingrédient principal"}
+            </button>
             <button type="submit" className="SearchIcon">
               <i className="fas fa-search" />
             </button>

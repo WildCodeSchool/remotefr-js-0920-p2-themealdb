@@ -28,6 +28,7 @@ function Footer() {
           </li>
         ))}
       </ul>
+      <p>© 2020 The Traveling Taste Buds: The Return</p>
     </div>
   );
 }

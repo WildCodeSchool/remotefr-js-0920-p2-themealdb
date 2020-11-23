@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './ContactForm.css';
 
 class ContactForm extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class ContactForm extends Component {
   render() {
     const { firstName, name, email } = this.state;
     return (
-      <div>
+      <div className="ContactForm">
         <h2>Contact :</h2>
         <form onSubmit={this.submit}>
           <label htmlFor="name">
@@ -54,7 +55,9 @@ class ContactForm extends Component {
             />
           </label>
 
-          <button type="submit">Send</button>
+          <button className="searchButton" type="submit">
+            Send
+          </button>
         </form>
       </div>
     );

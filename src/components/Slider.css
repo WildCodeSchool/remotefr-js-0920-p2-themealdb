@@ -14,14 +14,16 @@
   width: 100%;
   height: 100%;
 }
+
 .rec-arrow-right,
 .rec-arrow-left {
-  background: linear-gradient(to bottom, #f6aa1c 5%, #bf3604 100%);
+  background: linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
   cursor: pointer;
 }
+
 .chowzb:hover:enabled,
 .chowzb:focus:enabled {
-  background-color: #f6aa1c;
+  background-color: #ed8d8d;
 }
 
 button.ikyGAt:hover,

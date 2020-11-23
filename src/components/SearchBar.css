@@ -16,7 +16,10 @@
   color: #ed8d8d;
   box-sizing: border-box;
   outline: none;
-  border-color: #ed8d8d;
+  border: 2px solid #797876;
+  cursor: auto;
+  background-color: #cccccc;
+  border-radius: 5px;
 }
 
 .SearchBar input::placeholder {
@@ -25,8 +28,8 @@
 
 .SearchIcon {
   position: absolute;
-  top: 7px;
-  right: 5px;
+  top: -2px;
+  right: -680px;
   font-size: 20px;
   color: #ed8d8d;
   cursor: pointer;
@@ -36,23 +39,7 @@
 }
 
 .SearchIcon:hover {
-  color: #4d4545;
-}
-
-/* RESULT CONTAINER */
-
-.Results {
-  display: flex;
-  flex-flow: wrap;
-}
-
-.ResultsItem {
-  position: relative;
-  padding: 16px;
-  border: 1px solid #898989;
-  margin: 16px;
-  text-align: center;
-  min-width: 200px;
+  color: #e4685d;
 }
 
 /* LOADER */
@@ -72,4 +59,31 @@
 
 .hide {
   display: none;
+}
+
+/* BUTTON SEARCH BAR */
+
+.searchButton {
+  box-shadow: inset 0px 1px 0px 0px #f7c5c0;
+  background: linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+  background-color: #fc8d83;
+  border-radius: 6px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #b23e35;
+}
+.searchButton:hover {
+  background: linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
+  background-color: #e4685d;
+}
+.searchButton:active {
+  position: relative;
+  top: 1px;
 }

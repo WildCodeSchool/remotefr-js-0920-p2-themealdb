@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './RecipePage.css';
 
 function RecipePage({ recipe, getRecipe, link }) {
   if (recipe === null || recipe.idMeal !== link) {
@@ -56,31 +57,25 @@ function RecipePage({ recipe, getRecipe, link }) {
     return (
       <div className="RecipePage">
         <h1>{recipe.strMeal}</h1>
-        <div className="Recipe">
-          <div className="ImgRecipe">
-            <img src={recipe.strMealThumb} alt={`${recipe.strMeal}`} />
-          </div>
-          <div className="Ingredients">
-            <ul>
-              {ingredientsArray.map((ingredient, i) => {
-                if (ingredient !== null && ingredient !== '') {
-                  // eslint-disable-next-line react/no-array-index-key
-                  return <li key={`${i}-ingredient`}>{ingredient}</li>;
-                }
-                return false;
-              })}
-            </ul>
-          </div>
-          <div className="Measures">
-            <ul>
-              {measuresArray.map((measure, i) => {
-                if (measure !== null && measure !== '') {
-                  // eslint-disable-next-line react/no-array-index-key
-                  return <li key={`${i}-measure`}>{measure}</li>;
-                }
-                return false;
-              })}
-            </ul>
+        <div className="recipe-container">
+          <div className="Recipe">
+            <div className="ImgRecipe">
+              <img src={recipe.strMealThumb} alt={`${recipe.strMeal}`} />
+            </div>
+            <div className="Ingredients">
+              <ul>
+                {ingredientsArray.map((ingredient, i) => {
+                  if (ingredient !== null && ingredient !== '') {
+                    return (
+                      <li key={`${ingredient}`}>
+                        {`${ingredient} : ${measuresArray[i]}`}
+                      </li>
+                    );
+                  }
+                  return false;
+                })}
+              </ul>
+            </div>
           </div>
           <div className="Instructions">
             <p>{recipe.strInstructions}</p>
