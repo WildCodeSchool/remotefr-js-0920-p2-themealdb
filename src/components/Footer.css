@@ -1,31 +1,14 @@
-.Footer ul {
-  background-color: #f6aa1c;
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
+.social-container {
+  background: grey;
+  padding: 5px 800px;
 }
-
-.Footer ul {
-  list-style: none;
-}
-
-.Footer a {
-  padding: 1em;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-}
-
-.Footer .Menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.social-follow {
+  padding: 20px 70px;
 }
 a.social {
   margin: 0 1rem;
-  transition: transform 250ms;
   display: inline-block;
+  text-align: center;
 }
 a.social:hover {
   transform: translateY(-2px);
