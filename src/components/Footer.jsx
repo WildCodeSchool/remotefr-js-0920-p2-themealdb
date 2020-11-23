@@ -1,36 +1,39 @@
 import React from 'react';
 import './Footer.css';
 
-const reseauxSociaux = [
-  {
-    link: 'Facebook.com',
-    title: 'Facebook',
-  },
-  {
-    link: 'Twitter.com',
-    title: 'Twitter',
-  },
-  {
-    link: 'Instagram.com',
-    title: 'Instagram',
-  },
-];
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faYoutube,
+  faFacebook,
+  faTwitter,
+  faInstagram,
+} from '@fortawesome/free-brands-svg-icons';
 
-function Footer() {
+export default function Footer() {
   return (
-    <div className="Footer">
-      <ul className="Menu">
-        {reseauxSociaux.map(({ link, title }) => (
-          <li key={title}>
-            <a href={link}>
-              <span>{title}</span>
-            </a>
-          </li>
-        ))}
-      </ul>
-      <p>© 2020 The Traveling Taste Buds: The Return</p>
+    <div className="social-container">
+      <h3>Social Follow</h3>
+      <a
+        href="https://www.youtube.com/c/jamesqquick"
+        className="youtube social"
+      >
+        <FontAwesomeIcon icon={faYoutube} size="2x" />
+      </a>
+      <a
+        href="https://www.facebook.com/learnbuildteach/"
+        className="facebook social"
+      >
+        <FontAwesomeIcon icon={faFacebook} size="2x" />
+      </a>
+      <a href="https://www.twitter.com/jamesqquick" className="twitter social">
+        <FontAwesomeIcon icon={faTwitter} size="2x" />
+      </a>
+      <a
+        href="https://www.instagram.com/learnbuildteach"
+        className="instagram social"
+      >
+        <FontAwesomeIcon icon={faInstagram} size="2x" />
+      </a>
     </div>
   );
 }
-
-export default Footer;
