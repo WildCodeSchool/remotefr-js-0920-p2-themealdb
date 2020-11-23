@@ -3,7 +3,7 @@
 import React from 'react';
 import Carousel from 'react-elastic-carousel';
 import axios from 'axios';
-import { Route, Switch } from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
 import RecipePage from './components/RecipePage';
 import './components/RecipePage.css';
 import Navbar from './components/Navbar';
@@ -43,7 +43,7 @@ class App extends React.Component {
         axios.get(one).then((response) => response.data),
       ])
       .then((data) => {
-        const imgData = data.map((item) => item.meals[0].strMealThumb);
+        const imgData = data.map((item) => item.meals[0]);
         this.setState({
           img: imgData,
         });
@@ -59,7 +59,6 @@ class App extends React.Component {
           recipe: data.meals[0],
         });
       });
-    this.getSlider = this.getSlider.bind(this);
   }
 
   render() {
@@ -78,7 +77,9 @@ class App extends React.Component {
           <Route exact path="/">
             <Carousel breakPoints={breakPoints}>
               {img.map((picture) => (
-                <Slider key={picture} img={picture} />
+                <Link to={`recipe/${picture.idMeal}`}>
+                  <Slider key={picture} img={picture.strMealThumb} />
+                </Link>
               ))}
             </Carousel>
             <SearchBar />
