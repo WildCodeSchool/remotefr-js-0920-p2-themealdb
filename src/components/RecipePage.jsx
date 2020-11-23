@@ -57,27 +57,29 @@ function RecipePage({ recipe, getRecipe, link }) {
     return (
       <div className="RecipePage">
         <h1>{recipe.strMeal}</h1>
-        <div className="Recipe">
-          <div className="ImgRecipe">
-            <img src={recipe.strMealThumb} alt={`${recipe.strMeal}`} />
+        <div className="recipe-container">
+          <div className="Recipe">
+            <div className="ImgRecipe">
+              <img src={recipe.strMealThumb} alt={`${recipe.strMeal}`} />
+            </div>
+            <div className="Ingredients">
+              <ul>
+                {ingredientsArray.map((ingredient, i) => {
+                  if (ingredient !== null && ingredient !== '') {
+                    return (
+                      <li key={`${ingredient}`}>
+                        {`${ingredient} : ${measuresArray[i]}`}
+                      </li>
+                    );
+                  }
+                  return false;
+                })}
+              </ul>
+            </div>
           </div>
-          <div className="Ingredients">
-            <ul>
-              {ingredientsArray.map((ingredient, i) => {
-                if (ingredient !== null && ingredient !== '') {
-                  return (
-                    <li key={`${ingredient}`}>
-                      {`${ingredient} : ${measuresArray[i]}`}
-                    </li>
-                  );
-                }
-                return false;
-              })}
-            </ul>
+          <div className="Instructions">
+            <p>{recipe.strInstructions}</p>
           </div>
-        </div>
-        <div className="Instructions">
-          <p>{recipe.strInstructions}</p>
         </div>
       </div>
     );

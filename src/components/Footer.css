@@ -1,8 +1,9 @@
-.Footer ul {
+.Footer {
   background-color: #434343;
   margin: 0px;
   padding: 0px;
   list-style: none;
+  text-align: center;
 }
 
 .Footer ul {
