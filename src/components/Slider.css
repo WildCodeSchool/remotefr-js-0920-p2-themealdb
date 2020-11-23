@@ -6,7 +6,7 @@
   color: #220901;
 }
 .rec.rec-dot.rec-dot_active.brcpxa {
-  background-color: #f27405;
+  background-color: #ed8d8d;
   box-shadow: 0 0 1px 3px rgb(32, 31, 32);
 }
 
@@ -16,12 +16,12 @@
 }
 .rec-arrow-right,
 .rec-arrow-left {
-  background: linear-gradient(to bottom, #f6aa1c 5%, #bf3604 100%);
+  background: linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
   cursor: pointer;
 }
 .chowzb:hover:enabled,
 .chowzb:focus:enabled {
-  background-color: #f6aa1c;
+  background-color: #ed8d8d;
 }
 
 button.ikyGAt:hover,
