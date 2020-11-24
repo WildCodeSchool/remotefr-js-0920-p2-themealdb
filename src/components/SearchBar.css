@@ -28,9 +28,8 @@
 }
 
 .SearchIcon {
-  position: absolute;
-  top: -2px;
-  right: -680px;
+  top: -35px;
+  right: -760px;
   font-size: 20px;
   color: #ed8d8d;
   cursor: pointer;

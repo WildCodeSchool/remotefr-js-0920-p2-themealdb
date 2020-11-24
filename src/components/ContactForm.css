@@ -1,26 +1,46 @@
-.ContactForm label {
-  display: block;
-  margin-top: 20px;
-  text-align: center;
-  color: #797876;
+.ContactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.ContactForm input,
-textarea {
-  width: 200px;
-  padding: 3px;
-  font: 1em sans-serif;
-  cursor: pointer;
+.contactform-container {
   background-color: #cccccc;
-  border: 1px solid #220901;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25em;
+  width: 700px;
   border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+  font-size: 1.2em;
+}
+
+.contactform-title {
+  padding-bottom: 20px;
+  color: #797876;
+  text-transform: uppercase;
+}
+
+.form-control {
+  width: 600px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #434343;
+  color: #e4685d;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.ContactForm input {
+  height: 45px;
 }
 
 .ContactForm textarea {
-  width: 250px;
-  height: 120px;
+  height: 150px;
 }
 
-.ContactForm h2 {
-  color: #797876;
+.ContactForm input::placeholder,
+textarea::placeholder {
+  color: #e4685d;
 }

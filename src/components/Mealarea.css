@@ -1,8 +1,8 @@
 .MealArea h2 {
-  margin-left: 5em;
-  margin-bottom: 2em;
+  text-align: center;
+  padding-bottom: 20px;
   color: #797876;
-  text-decoration: underline;
+  text-transform: uppercase;
 }
 
 .MealArea ul {

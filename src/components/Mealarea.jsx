@@ -90,7 +90,7 @@ class Mealarea extends React.Component {
     return (
       <div className="MealArea">
         <div className="container-title-flag">
-          <h2>Search by Area Meal :</h2>
+          <h2>Search by Area Meal</h2>
 
           <ul>
             {areas.map((area) => (

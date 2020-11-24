@@ -133,6 +133,9 @@ class SearchBar extends React.Component {
               placeholder="Search Meal..."
               onChange={this.handleChange}
             />
+            <button type="submit" className="SearchIcon">
+              <i className="fas fa-search" />
+            </button>
             <p>Search by :</p>
             <button
               className="searchButton"
@@ -140,9 +143,6 @@ class SearchBar extends React.Component {
               type="button"
             >
               {searchStatus ? 'Name' : 'Ingredient'}
-            </button>
-            <button type="submit" className="SearchIcon">
-              <i className="fas fa-search" />
             </button>
           </label>
         </form>

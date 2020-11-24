@@ -5,8 +5,8 @@ class ContactForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      lastName: null,
       firstName: null,
-      name: null,
       email: null,
     };
   }
@@ -22,43 +22,59 @@ class ContactForm extends Component {
   };
 
   render() {
-    const { firstName, name, email } = this.state;
+    const { firstName, lastName, email } = this.state;
     return (
       <div className="ContactForm">
-        <h2>Contact :</h2>
-        <form onSubmit={this.submit}>
-          <label htmlFor="name">
-            Name:
-            <input type="text" id="name" value={name} onChange={this.change} />
-          </label>
-          <label htmlFor="firstName">
-            First Name:
-            <input
-              type="text"
-              id="firstName"
-              value={firstName}
-              onChange={this.change}
-            />
-          </label>
-          <label htmlFor="msg">
-            Message:
-            <textarea type="text" id="msg" onChange={this.change} />
-          </label>
-          <label htmlFor="email">
-            Email:
-            <input
-              type="text"
-              id="email"
-              value={email}
-              placeholder="fredericdurand@sfr.fr"
-              onChange={this.change}
-            />
-          </label>
+        <div className="contactform-title">
+          <h2>Contact</h2>
+        </div>
+        <div className="contactform-container">
+          <form onSubmit={this.submit}>
+            <label htmlFor="firstname">
+              <input
+                type="text"
+                id="name"
+                placeholder="Your firstname"
+                className="form-control"
+                value={firstName}
+                onChange={this.change}
+              />
+            </label>
+            <label htmlFor="lastname">
+              <input
+                type="text"
+                id="firstName"
+                placeholder="Your lastname"
+                className="form-control"
+                value={lastName}
+                onChange={this.change}
+              />
+            </label>
+            <label htmlFor="email">
+              <input
+                type="text"
+                id="email"
+                value={email}
+                placeholder="Your email"
+                className="form-control"
+                onChange={this.change}
+              />
+            </label>
+            <label htmlFor="msg">
+              <textarea
+                type="text"
+                id="msg"
+                placeholder="Your message"
+                className="form-control"
+                onChange={this.change}
+              />
+            </label>
 
-          <button className="searchButton" type="submit">
-            Send
-          </button>
-        </form>
+            <button className="searchButton" type="submit">
+              Send
+            </button>
+          </form>
+        </div>
       </div>
     );
   }
