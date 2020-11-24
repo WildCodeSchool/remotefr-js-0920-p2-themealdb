@@ -5,7 +5,7 @@
   align-items: left;
   /* padding: 0.5rem 2rem; */
   width: 100%;
-  background-color: #f6aa1c;
+  background-color: #434343;
   margin-bottom: 4rem;
 }
 
@@ -33,16 +33,16 @@
 
 .navbar li a {
   padding: 1em;
-  background-color: #f27405;
-  color: #220901;
-  text-decoration: none;
+  background-color: #f46263;
+  color: #fff;
+  text-decoration: underline;
 }
 
 .title {
   align-items: center;
   justify-content: center;
   font-family: 60px 'Open Sans';
-  color: #220901;
+  color: #fff;
   display: inline-block;
   vertical-align: top;
 }

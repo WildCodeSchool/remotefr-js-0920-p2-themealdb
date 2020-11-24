@@ -25,7 +25,7 @@ export default function Footer() {
       <a href="https://www.instagram.com" className="instagram social">
         <FontAwesomeIcon icon={faInstagram} size="2x" />
       </a>
-      <p>©The Traveling Taste Buds: The Return</p>
+      <p>© 2020 The Traveling Taste Buds: The Return</p>
     </div>
   );
 }

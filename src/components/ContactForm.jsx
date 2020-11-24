@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './ContactForm.css';
 
 class ContactForm extends Component {
   constructor(props) {
@@ -54,7 +55,9 @@ class ContactForm extends Component {
             />
           </label>
 
-          <button type="submit">Send</button>
+          <button className="searchButton" type="submit">
+            Send
+          </button>
         </form>
       </div>
     );

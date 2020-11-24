@@ -3,9 +3,8 @@
 import React from 'react';
 import Carousel from 'react-elastic-carousel';
 import axios from 'axios';
-import { Route, Switch } from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
 import RecipePage from './components/RecipePage';
-import './components/RecipePage.css';
 import Navbar from './components/Navbar';
 import WhoAreWe from './components/WhoAreWe';
 import SearchBar from './components/SearchBar';
@@ -13,8 +12,8 @@ import Mealarea from './components/Mealarea';
 import Slider from './components/Slider';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
-import './components/ContactForm.css';
 import './normalize.css';
+import './App.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -43,7 +42,7 @@ class App extends React.Component {
         axios.get(one).then((response) => response.data),
       ])
       .then((data) => {
-        const imgData = data.map((item) => item.meals[0].strMealThumb);
+        const imgData = data.map((item) => item.meals[0]);
         this.setState({
           img: imgData,
         });
@@ -73,35 +72,39 @@ class App extends React.Component {
     return (
       <div className="App">
         <Navbar />
-        <Switch>
-          <Route exact path="/">
-            <Carousel breakPoints={breakPoints}>
+        <div className="container">
+          <Switch>
+            <Route exact path="/">
+              <Carousel breakPoints={breakPoints}>
               {img.map((picture) => (
-                <Slider key={picture} img={picture} />
+                <Link to={`recipe/${picture.idMeal}`}>
+                  <Slider key={picture} img={picture.strMealThumb} />
+                </Link>
               ))}
             </Carousel>
-            <SearchBar />
-          </Route>
-          <Route path="/contact-form">
-            <ContactForm />
-          </Route>
-          <Route path="/who-are-we">
-            <WhoAreWe />
-          </Route>
-          <Route
-            path="/recipe/:recipeLink"
-            render={(props) => (
-              <RecipePage
-                link={props.match.params.recipeLink}
-                recipe={recipe}
-                getRecipe={this.getRecipe}
-              />
-            )}
-          />
-          <Route path="/meal-area">
-            <Mealarea />
-          </Route>
-        </Switch>
+              <SearchBar />
+            </Route>
+            <Route path="/contact-form">
+              <ContactForm />
+            </Route>
+            <Route path="/who-are-we">
+              <WhoAreWe />
+            </Route>
+            <Route
+              path="/recipe/:recipeLink"
+              render={(props) => (
+                <RecipePage
+                  link={props.match.params.recipeLink}
+                  recipe={recipe}
+                  getRecipe={this.getRecipe}
+                />
+              )}
+            />
+            <Route path="/meal-area">
+              <Mealarea />
+            </Route>
+          </Switch>
+        </div>
         <Footer />
       </div>
     );
