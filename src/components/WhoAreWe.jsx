@@ -7,15 +7,17 @@ function WhoAreWe() {
   return (
     <main className="team-main">
       <article className="team-history">
-        <h1 className="team-h1">Our Team of enthusiasts</h1>
-        <img src={img1} alt="first site" />
-        <p>
-          Party of a simple adventure with friends in April 2015, The Traveling
-          Taste Buds became a business in November 2020. Following the many
-          cooking recipes that have reached us on our contact form on the first
-          site, the idea came to us of creating a second site which allow us to
-          list thousands of different recipes.
-        </p>
+        <div className="team-presentation">
+          <h1 className="team-h1">Our Team of enthusiasts</h1>
+          <img className="img1" src={img1} alt="first site" />
+          <p>
+            Party of a simple adventure with friends in April 2015, The
+            Traveling Taste Buds became a business in November 2020. Following
+            the many cooking recipes that have reached us on our contact form on
+            the first site, the idea came to us of creating a second site which
+            allow us to list thousands of different recipes.
+          </p>
+        </div>
       </article>
 
       <article className="team-content">

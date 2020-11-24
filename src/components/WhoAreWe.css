@@ -1,6 +1,15 @@
 .team-h1 {
   width: 100%;
   margin-bottom: 6rem;
+  justify-content: center;
+}
+
+.team-presentation {
+  text-align: center;
+}
+
+.img1 {
+  justify-content: center;
 }
 
 .team-main {
@@ -15,6 +24,7 @@
 .team-content {
   border: 10px solid black;
   flex-flow: row wrap;
+  text-align: center;
   justify-content: center;
   transition: all 0.7s ease-in-out;
   width: 40%;
