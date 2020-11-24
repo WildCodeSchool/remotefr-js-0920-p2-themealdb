@@ -1,0 +1,39 @@
+.team-h1 {
+  width: 100%;
+  margin-bottom: 6rem;
+}
+
+.team-main {
+  justify-content: space-around;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: auto;
+  background-color: var(--background-white);
+}
+
+.team-content {
+  flex-flow: row wrap;
+  justify-content: center;
+  transition: all 0.7s ease-in-out;
+  width: 40%;
+  min-width: 300px;
+  border: 0.1rem solid var(--text-black);
+  margin: 0 0.5rem 3rem 0.5rem;
+  padding: 1.5rem !important;
+}
+
+.team-content img {
+  width: 50%;
+  height: auto;
+}
+
+.team-h3 {
+  width: 100%;
+}
+
+.team-p {
+  width: 100%;
+  text-align: justify !important;
+  margin: 0;
+}
