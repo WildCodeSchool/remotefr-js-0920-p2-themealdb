@@ -69,8 +69,7 @@ class ContactForm extends Component {
                 onChange={this.change}
               />
             </label>
-
-            <button className="searchButton" type="submit">
+            <button className="searchButton-form" type="submit">
               Send
             </button>
           </form>
