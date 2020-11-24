@@ -5,8 +5,8 @@
 .social-follow {
   text-align: center;
 }
-a.social-icons {
-  align-items: center;
+.social-icons {
+  text-align: center;
 }
 a.social {
   margin: 0 10px;
@@ -31,5 +31,5 @@ a.twitter {
 }
 
 a.instagram {
-  color: black;
+  color: rgb(187, 15, 110);
 }
