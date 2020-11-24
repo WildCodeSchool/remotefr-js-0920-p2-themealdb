@@ -13,12 +13,12 @@
 }
 
 .team-content {
+  border: 10px solid black;
   flex-flow: row wrap;
   justify-content: center;
   transition: all 0.7s ease-in-out;
   width: 40%;
   min-width: 300px;
-  border: 0.1rem solid var(--text-black);
   margin: 0 0.5rem 3rem 0.5rem;
   padding: 1.5rem !important;
 }

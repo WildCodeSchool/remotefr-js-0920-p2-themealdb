@@ -64,9 +64,9 @@ function WhoAreWe() {
           I am part of the starting team of the creation of the site 1 of the
           Traveling Taste Buds. I am always in contact with my friends Floran,
           Justine and Corentin who have created a training school to become a
-          cook : the Delicious Cook School. Sometimes,they advise me and give me
-          their opinion. I take care of the promotion of the site and social
-          networks.
+          cook : the &#8220;Delicious Cook School&#8220;. Sometimes,they advise
+          me and give me their opinion. I take care of the promotion of the site
+          and social networks.
         </p>
       </article>
     </main>
