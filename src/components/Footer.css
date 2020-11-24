@@ -1,26 +1,30 @@
-.Footer {
-  background-color: #434343;
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
+.social-container {
+  background: grey;
+  padding: 5px 800px;
+}
+.social-follow {
+  padding: 20px 70px;
+}
+a.social {
+  margin: 0 1rem;
+  display: inline-block;
   text-align: center;
 }
-
-.Footer ul {
-  list-style: none;
+a.social:hover {
+  transform: translateY(-2px);
+}
+a.youtube {
+  color: #eb3223;
 }
 
-.Footer a {
-  color: #f46263;
-  padding: 1em;
-  display: block;
-  text-align: center;
-  text-decoration: none;
+a.facebook {
+  color: #4968ad;
 }
 
-.Footer .Menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+a.twitter {
+  color: #49a1eb;
+}
+
+a.instagram {
+  color: black;
 }
