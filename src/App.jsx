@@ -79,38 +79,39 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/">
               <Carousel breakPoints={breakPoints}>
-              {img.map((picture) => (
-                <Link to={`recipe/${picture.idMeal}`}>
-                  <Slider key={picture} img={picture.strMealThumb} />
-                </Link>
-              ))}
-            </Carousel>
-            <SearchBar />
-          </Route>
-          <Route path="/contact-form">
-            <ContactForm />
-          </Route>
-          <Route path="/who-are-we">
-            <WhoAreWe />
-          </Route>
-          <Route
-            path="/recipe/:recipeLink"
-            render={(props) => (
-              <RecipePage
-                link={props.match.params.recipeLink}
-                recipe={recipe}
-                getRecipe={this.getRecipe}
-              />
-            )}
-          />
-          <Route path="/meal-area">
-            <Mealarea />
-          </Route>
-          <Route path="/fav">
-            <FavoritePage />
-          </Route>
-        </Switch>
-        <Footer />
+                {img.map((picture) => (
+                  <Link to={`recipe/${picture.idMeal}`}>
+                    <Slider key={picture} img={picture.strMealThumb} />
+                  </Link>
+                ))}
+              </Carousel>
+              <SearchBar />
+            </Route>
+            <Route path="/contact-form">
+              <ContactForm />
+            </Route>
+            <Route path="/who-are-we">
+              <WhoAreWe />
+            </Route>
+            <Route
+              path="/recipe/:recipeLink"
+              render={(props) => (
+                <RecipePage
+                  link={props.match.params.recipeLink}
+                  recipe={recipe}
+                  getRecipe={this.getRecipe}
+                />
+              )}
+            />
+            <Route path="/meal-area">
+              <Mealarea />
+            </Route>
+            <Route path="/fav">
+              <FavoritePage />
+            </Route>
+          </Switch>
+          <Footer />
+        </div>
       </div>
     );
   }
