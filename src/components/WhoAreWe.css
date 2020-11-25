@@ -8,8 +8,8 @@
   text-align: center;
 }
 
-.img1 {
-  justify-content: center;
+.team-presentation img {
+  width: 300px;
 }
 
 .team-main {
@@ -18,7 +18,6 @@
   flex-flow: row wrap;
   width: 100%;
   margin: auto;
-  background-color: var(--background-white);
 }
 
 .team-content {
@@ -30,7 +29,7 @@
   width: 40%;
   min-width: 300px;
   margin: 0 0.5rem 3rem 0.5rem;
-  padding: 1.5rem !important;
+  padding: 1.5rem;
 }
 
 .team-content img {

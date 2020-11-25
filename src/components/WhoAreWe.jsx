@@ -9,7 +9,7 @@ function WhoAreWe() {
       <article className="team-history">
         <div className="team-presentation">
           <h1 className="team-h1">Our Team of enthusiasts</h1>
-          <img className="img1" src={img1} alt="first site" />
+          <img src={img1} alt="first site" />
           <p>
             Party of a simple adventure with friends in April 2015, The
             Traveling Taste Buds became a business in November 2020. Following
