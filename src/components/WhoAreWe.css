@@ -14,10 +14,6 @@
   width: 60%;
 }
 
-.team-presentation img:hover {
-  opacity: 0.5;
-}
-
 .team-main {
   justify-content: space-around;
   display: flex;

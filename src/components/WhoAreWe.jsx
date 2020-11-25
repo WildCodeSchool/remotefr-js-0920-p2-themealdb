@@ -21,7 +21,7 @@ function WhoAreWe() {
             >
               <img src={img1} alt="first site" />
               <div className="overlay">
-                <div className="overlay-text">AGRANDIR</div>
+                <div className="overlay-text">ENLARGE</div>
               </div>
             </a>
           </div>
