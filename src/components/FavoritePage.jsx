@@ -1,3 +1,4 @@
+/* eslint-disable react/no-did-update-set-state */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import axios from 'axios';
@@ -7,13 +8,32 @@ class FavoritePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      favorites: ['52772', '52773'],
+      favorites: [],
       favArray: null,
     };
+    this.onRemove = this.onRemove.bind(this);
   }
 
   componentDidMount() {
-    console.log(this.state.favorites);
+    this.getFav();
+  }
+
+  onRemove(id) {
+    const { favArray } = this.state;
+    const newArray = favArray.filter((item) => item.idMeal !== id);
+    this.setState({
+      favArray: newArray,
+    });
+  }
+
+  getFav() {
+    const { length } = localStorage;
+    const { favorites } = this.state;
+    for (let i = 0; i < length; i += 1) {
+      this.setState({
+        favorites: favorites.push(localStorage.key(i)),
+      });
+    }
     axios
       .all(
         this.state.favorites.map((fav) =>
@@ -31,11 +51,16 @@ class FavoritePage extends React.Component {
 
   render() {
     const { favArray } = this.state;
-
+    const { onRemove } = this;
     return (
       <div>
         <p>This is a favorites page</p>
-        {favArray ? <ArticleList results={favArray} /> : <p>Loading</p>}
+
+        {favArray ? (
+          <ArticleList results={favArray} onRemove={onRemove} />
+        ) : (
+          <p>Loading</p>
+        )}
       </div>
     );
   }

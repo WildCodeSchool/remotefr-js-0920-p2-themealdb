@@ -13,7 +13,7 @@ class Article extends React.Component {
   }
 
   render() {
-    const { strMealThumb, strMeal, strTags, id } = this.props;
+    const { strMealThumb, strMeal, strTags, id, onRemove } = this.props;
     const { favorite } = this.state;
     const tags = strTags.split(',');
 
@@ -45,6 +45,7 @@ class Article extends React.Component {
                 this.setState({
                   favorite: false,
                 });
+                onRemove(id);
               } else {
                 localStorage.setItem(id, id);
                 this.setState({
@@ -66,6 +67,7 @@ Article.propTypes = {
   strMealThumb: PropTypes.string.isRequired,
   strTags: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  onRemove: PropTypes.func.isRequired,
 };
 
 export default Article;
