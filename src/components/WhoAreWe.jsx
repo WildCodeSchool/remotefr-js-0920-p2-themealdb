@@ -1,6 +1,8 @@
 import React from 'react';
 import img1 from './images/img1.png';
-import img2 from './images/img2.png';
+import christophe from './images/christophe.png';
+import miguel from './images/miguel.png';
+import matisse from './images/matisse.png';
 import './WhoAreWe.css';
 
 function WhoAreWe() {
@@ -8,8 +10,21 @@ function WhoAreWe() {
     <main className="team-main">
       <article className="team-history">
         <div className="team-presentation">
-          <h1 className="team-h1">Our Team of enthusiasts</h1>
-          <img src={img1} alt="first site" />
+          <h2 className="team-h2">Our Team of enthusiasts</h2>
+          <div className="img-container">
+            <a
+              href="./components/images/img1.png"
+              target="_blank"
+              alt="Les Papilles voyageuses"
+              title="Les Papilles voyageuses"
+              className="img-papilles"
+            >
+              <img src={img1} alt="first site" />
+              <div className="overlay">
+                <div className="overlay-text">AGRANDIR</div>
+              </div>
+            </a>
+          </div>
           <p>
             Party of a simple adventure with friends in April 2015, The
             Traveling Taste Buds became a business in November 2020. Following
@@ -24,6 +39,7 @@ function WhoAreWe() {
         <img
           src="https://avatars0.githubusercontent.com/u/43884584?s=400&u=bbba901f0fa0cd299a051b09a9a416d1ae28622c&v=4"
           alt="Cédric Priouret"
+          title="Cédric Priouret"
         />
         <h3>Cédric Priouret</h3>
         <p>
@@ -35,10 +51,7 @@ function WhoAreWe() {
         </p>
       </article>
       <article className="team-content">
-        <img
-          src="https://avatars1.githubusercontent.com/u/64069872?s=400&v=4"
-          alt="Matisse Famularo"
-        />
+        <img src={matisse} alt="Matisse Famularo" title="Matisse Famularo" />
         <h3>Matisse Famularo</h3>
         <p>
           I am the Web Development Manager of the site. Before becoming a
@@ -47,10 +60,7 @@ function WhoAreWe() {
         </p>
       </article>
       <article className="team-content">
-        <img
-          src="https://avatars3.githubusercontent.com/u/69686253?s=400&u=2e5dec1c9013d5cd5deeeb10c7c8ab1ed84366a8&v=4"
-          alt="Miguel santos"
-        />
+        <img src={miguel} alt="Miguel Santos" title="Miguel Santos" />
         <h3>Miguel Santos</h3>
         <p>
           {`I am the owner of the restaurant "Furia de Mar" in Lisbon, Portugal.
@@ -60,7 +70,11 @@ function WhoAreWe() {
         </p>
       </article>
       <article className="team-content">
-        <img src={img2} alt="Christophe Castan" />
+        <img
+          src={christophe}
+          alt="Christophe Castan"
+          title="Christophe Castan"
+        />
         <h3>Christophe Castan </h3>
         <p>
           I am part of the starting team of the creation of the site 1 of the
