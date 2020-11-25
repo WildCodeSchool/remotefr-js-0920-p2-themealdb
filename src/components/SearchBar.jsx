@@ -123,26 +123,29 @@ class SearchBar extends React.Component {
     return (
       <div className="SearchBar">
         {/* Search Input */}
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className="search-form">
           <label className="SearchLabel" htmlFor="search-input">
             <input
               type="text"
               name="query"
               value={query}
-              id="search-input"
               placeholder="Search Meal..."
               onChange={this.handleChange}
             />
-            <p>
-              Appuyer sur le bouton pour changer le style de recherche ACTIVE
-            </p>
-            <button onClick={this.changeFilter} type="button">
-              {searchStatus ? 'Selon le nom' : 'Selon l ingrédient principal'}
-            </button>
             <button type="submit" className="SearchIcon">
               <i className="fas fa-search" />
             </button>
           </label>
+          <div className="search-button">
+            <p>Search by</p>
+            <button
+              className="searchButton"
+              onClick={this.changeFilter}
+              type="button"
+            >
+              {searchStatus ? 'Name' : 'Ingredient'}
+            </button>
+          </div>
         </form>
         {/* Error Message */}
         {message && <p className="Message">{message}</p>}

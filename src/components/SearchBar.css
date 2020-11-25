@@ -1,36 +1,54 @@
 .SearchBar {
-  margin: 36px auto;
-  width: 100%;
-  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  color: #797876;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.search-button {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 360px;
 }
 
 .SearchLabel {
-  position: relative;
-}
-
-.SearchBar input {
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 25px auto;
   padding: 10px;
+  width: 55%;
+  min-width: 55%;
   font-size: 18px;
   font-style: italic;
-  color: #bf3604;
-  box-sizing: border-box;
+  color: #ed8d8d;
   outline: none;
-  border-color: #bf3604;
+  border: 2px solid #797876;
   cursor: auto;
-  background-color: #f27405;
+  background-color: #cccccc;
+  border-radius: 5px;
+}
+
+.SearchLabel > input {
+  background: transparent;
+  border: none;
+  outline: none;
+  min-width: 55%;
 }
 
 .SearchBar input::placeholder {
-  color: #bf3604;
+  color: #ed8d8d;
+  font-style: italic;
 }
 
 .SearchIcon {
-  position: absolute;
-  top: 7px;
-  right: 5px;
   font-size: 20px;
-  color: #bf3604;
+  box-sizing: border-box;
+  color: #ed8d8d;
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -38,7 +56,7 @@
 }
 
 .SearchIcon:hover {
-  color: #f6aa1c;
+  color: #e4685d;
 }
 
 /* LOADER */
@@ -59,3 +77,37 @@
 .hide {
   display: none;
 }
+
+/* BUTTON SEARCH BAR */
+
+.searchButton {
+  box-shadow: inset 0px 1px 0px 0px #f7c5c0;
+  background: linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+  background-color: #fc8d83;
+  border-radius: 6px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #b23e35;
+}
+
+.searchButton:hover {
+  background: linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
+  background-color: #e4685d;
+}
+
+.searchButton:active {
+  position: relative;
+  top: 1px;
+}
+
+/*****************
+* VERSION MOBILE *
+*****************/

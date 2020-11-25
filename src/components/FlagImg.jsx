@@ -39,7 +39,7 @@ const flags = [
     name: 'Indian',
   },
   {
-    image: 'https://www.countryflags.io/ir/shiny/64.png',
+    image: 'https://www.countryflags.io/ie/shiny/64.png',
     name: 'Irish',
   },
   {
@@ -104,17 +104,26 @@ const flags = [
   },
 ];
 function FlagImg(props) {
-  const flag = flags.find((imgFlag) => imgFlag.name === props.area);
-
+  const { area, key, getListFromNat } = props;
+  const flag = flags.find((imgFlag) => imgFlag.name === area);
   return (
     <div className="FlagImg">
-      <img src={flag.image} alt={flag.name} />
+      <button
+        type="button"
+        className="btnMealarea"
+        onClick={getListFromNat}
+        key={key}
+      >
+        <img src={flag.image} alt={flag.name} />
+      </button>
     </div>
   );
 }
 
 FlagImg.propTypes = {
   area: PropTypes.string.isRequired,
+  key: PropTypes.string.isRequired,
+  getListFromNat: PropTypes.func.isRequired,
 };
 
 export default FlagImg;
