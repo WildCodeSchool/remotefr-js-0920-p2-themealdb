@@ -1,17 +1,22 @@
 .social-container {
-  background: grey;
-  padding: 5px 800px;
+  background: #434343;
+  padding: 4px 40px;
 }
 .social-follow {
-  padding: 20px 70px;
+  text-align: center;
+}
+.social-icons {
+  text-align: center;
 }
 a.social {
-  margin: 0 1rem;
+  margin: 0 10px;
   display: inline-block;
-  text-align: center;
 }
 a.social:hover {
   transform: translateY(-2px);
+}
+.copyright {
+  text-align: center;
 }
 a.youtube {
   color: #eb3223;
@@ -26,5 +31,5 @@ a.twitter {
 }
 
 a.instagram {
-  color: black;
+  color: rgb(187, 15, 110);
 }
