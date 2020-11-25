@@ -5,7 +5,7 @@
 }
 
 .contactform-container {
-  width: 700px;
+  width: 40%;
   background-color: #cccccc;
   padding: 1.25em;
   margin-bottom: 50px;
@@ -76,4 +76,20 @@ textarea::placeholder {
 .searchButton-form:active {
   position: relative;
   top: 1px;
+}
+
+/************************ 
+******VERSION MOBILE*****
+************************/
+
+@media only screen and (max-width: 376px) {
+  /* Styles pour cette Media Queries */
+}
+
+/************************ 
+******VERSION TABLETTE*****
+************************/
+
+@media only screen and (min-width: 377px) and (max-width: 1024px) {
+  /* Styles pour cette Media Queries */
 }

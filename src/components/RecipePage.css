@@ -4,10 +4,11 @@
   margin: 5rem;
   border-radius: 41px;
 }
-.RecipePage h1 {
+.RecipePage h2 {
   color: #797876;
-  text-decoration: underline;
-  padding: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .recipe-container {
@@ -49,4 +50,20 @@
   align-items: center;
   font-size: 20px;
   color: #220901;
+}
+
+/************************ 
+******VERSION MOBILE*****
+************************/
+
+@media only screen and (max-width: 376px) {
+  /* Styles pour cette Media Queries */
+}
+
+/************************ 
+******VERSION TABLETTE*****
+************************/
+
+@media only screen and (min-width: 377px) and (max-width: 1024px) {
+  /* Styles pour cette Media Queries */
 }

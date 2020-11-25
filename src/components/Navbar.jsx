@@ -31,6 +31,14 @@ function Navbar() {
             </Link>
           </li>
           <li>
+            <span role="img" aria-label="Favorite">
+              ⭐
+            </span>
+            <Link to="/fav" className="cool-link">
+              Favorite
+            </Link>
+          </li>
+          <li>
             <span role="img" aria-label="Who you are?">
               🙍‍♂️
             </span>

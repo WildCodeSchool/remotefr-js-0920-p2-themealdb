@@ -110,8 +110,8 @@ class App extends React.Component {
               <FavoritePage />
             </Route>
           </Switch>
-          <Footer />
         </div>
+        <Footer />
       </div>
     );
   }

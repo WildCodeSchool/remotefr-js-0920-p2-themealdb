@@ -19,11 +19,6 @@
   justify-content: center;
 }
 
-/* .navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-} */
 .navbar li {
   display: inline-block;
   margin-left: 50px;
@@ -79,4 +74,36 @@ HREF UNDERLINE ANIMATION
 .cool-link:hover::after {
   width: 100%;
   transition: width 1s;
+}
+
+/************************ 
+******VERSION MOBILE*****
+************************/
+
+@media only screen and (max-width: 376px) {
+  .navbar-logo {
+    display: none;
+  }
+
+  .menucenter {
+    flex-direction: row-reverse;
+  }
+  /* MENU BURGER */
+  .navbar ul {
+    flex-flow: column nowrap;
+    background-color: #797876;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 375px;
+  }
+}
+
+/************************ 
+******VERSION TABLETTE *****
+************************/
+
+@media only screen and (min-width: 377px) and (max-width: 1024px) {
+  /* MENU BURGER */
 }

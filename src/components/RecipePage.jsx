@@ -56,7 +56,7 @@ function RecipePage({ recipe, getRecipe, link }) {
 
     return (
       <div className="RecipePage">
-        <h1>{recipe.strMeal}</h1>
+        <h2>{recipe.strMeal}</h2>
         <div className="recipe-container">
           <div className="Recipe">
             <div className="ImgRecipe">
