@@ -1,5 +1,3 @@
-/* eslint-disable react/no-did-update-set-state */
-/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import axios from 'axios';
 import ArticleList from './ArticleList';
@@ -36,7 +34,7 @@ class FavoritePage extends React.Component {
     }
     axios
       .all(
-        this.state.favorites.map((fav) =>
+        favorites.map((fav) =>
           axios
             .get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${fav}`)
             .then((res) => res.data.meals[0]),

@@ -22,7 +22,7 @@ class Article extends React.Component {
         <img src={strMealThumb} alt={strMeal} />
         <figcaption>
           <Link to={`recipe/${id}`}>
-            <h2>{`${strMeal} et ${id}`}</h2>
+            <h2>{`${strMeal}`}</h2>
           </Link>
           <blockquote>
             Tag:
