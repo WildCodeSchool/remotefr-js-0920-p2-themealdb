@@ -1,26 +1,79 @@
-.ContactForm label {
-  display: block;
-  margin-top: 20px;
-  text-align: center;
-  color: #797876;
+.ContactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.ContactForm input,
-textarea {
-  width: 200px;
-  padding: 3px;
-  font: 1em sans-serif;
-  cursor: pointer;
+.contactform-container {
+  width: 700px;
   background-color: #cccccc;
-  border: 1px solid #220901;
+  padding: 1.25em;
+  margin-bottom: 50px;
   border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+  font-size: 1.2em;
+}
+
+.contactform-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactform-title {
+  padding-bottom: 20px;
+  color: #797876;
+  text-transform: uppercase;
+}
+
+.form-control {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #434343;
+  color: #e4685d;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.ContactForm input {
+  height: 45px;
 }
 
 .ContactForm textarea {
-  width: 250px;
-  height: 120px;
+  height: 150px;
 }
 
-.ContactForm h2 {
-  color: #797876;
+.ContactForm input::placeholder,
+textarea::placeholder {
+  color: #e4685d;
+}
+
+.searchButton-form {
+  align-self: flex-end;
+  width: 100px;
+  box-shadow: inset 0px 1px 0px 0px #f7c5c0;
+  background: linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+  background-color: #fc8d83;
+  border-radius: 6px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #b23e35;
+}
+
+.searchButton-form:hover {
+  background: linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
+  background-color: #e4685d;
+}
+
+.searchButton-form:active {
+  position: relative;
+  top: 1px;
 }

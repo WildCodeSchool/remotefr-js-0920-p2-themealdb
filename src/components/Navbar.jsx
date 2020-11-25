@@ -15,16 +15,36 @@ function Navbar() {
       <div className="menucenter">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <span role="img" aria-label="Home">
+              🏘️
+            </span>
+            <Link to="/" className="cool-link">
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/meal-area">Meal by Area</Link>
+            <span role="img" aria-label="Mea by Area">
+              🍔
+            </span>
+            <Link to="/meal-area" className="cool-link">
+              Meal by Area
+            </Link>
           </li>
           <li>
-            <Link to="/who-are-we">Who are we ?</Link>
+            <span role="img" aria-label="Who you are?">
+              🙍‍♂️
+            </span>
+            <Link to="/who-are-we" className="cool-link">
+              Who are we ?
+            </Link>
           </li>
           <li>
-            <Link to="/contact-form">Contact</Link>
+            <span role="img" aria-label="Contact">
+              📝
+            </span>
+            <Link to="/contact-form" className="cool-link">
+              Contact
+            </Link>
           </li>
         </ul>
         <div className="title">
