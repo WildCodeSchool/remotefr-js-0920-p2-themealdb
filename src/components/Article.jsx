@@ -1,18 +1,19 @@
-/* eslint-disable no-console */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import './Article.css';
 
 class Article extends React.Component {
   constructor(props) {
     super(props);
+    const { id } = this.props;
     this.state = {
-      favorite: false,
+      favorite: localStorage.getItem(id) === id,
     };
   }
 
   render() {
-    const { strMealThumb, strMeal, strTags } = this.props;
+    const { strMealThumb, strMeal, strTags, id, onRemove } = this.props;
     const { favorite } = this.state;
     const tags = strTags.split(',');
 
@@ -20,7 +21,9 @@ class Article extends React.Component {
       <figure className="Article">
         <img src={strMealThumb} alt={strMeal} />
         <figcaption>
-          <h2>{strMeal}</h2>
+          <Link to={`recipe/${id}`}>
+            <h2>{`${strMeal}`}</h2>
+          </Link>
           <blockquote>
             Tag:
             {tags.map((tag) => {
@@ -37,8 +40,18 @@ class Article extends React.Component {
             type="button"
             className={favorite ? 'is-favorite' : ''}
             onClick={() => {
-              const newFavorite = !favorite;
-              this.setState({ favorite: newFavorite });
+              if (localStorage.getItem(id) === id) {
+                localStorage.removeItem(id);
+                this.setState({
+                  favorite: false,
+                });
+                onRemove(id);
+              } else {
+                localStorage.setItem(id, id);
+                this.setState({
+                  favorite: true,
+                });
+              }
             }}
           >
             &#9733;
@@ -53,6 +66,8 @@ Article.propTypes = {
   strMeal: PropTypes.string.isRequired,
   strMealThumb: PropTypes.string.isRequired,
   strTags: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  onRemove: PropTypes.func.isRequired,
 };
 
 export default Article;

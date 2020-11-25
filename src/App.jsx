@@ -12,6 +12,9 @@ import Mealarea from './components/Mealarea';
 import Slider from './components/Slider';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
+
+import FavoritePage from './components/FavoritePage';
+
 import './normalize.css';
 import './App.css';
 
@@ -82,29 +85,31 @@ class App extends React.Component {
                 </Link>
               ))}
             </Carousel>
-              <SearchBar />
-            </Route>
-            <Route path="/contact-form">
-              <ContactForm />
-            </Route>
-            <Route path="/who-are-we">
-              <WhoAreWe />
-            </Route>
-            <Route
-              path="/recipe/:recipeLink"
-              render={(props) => (
-                <RecipePage
-                  link={props.match.params.recipeLink}
-                  recipe={recipe}
-                  getRecipe={this.getRecipe}
-                />
-              )}
-            />
-            <Route path="/meal-area">
-              <Mealarea />
-            </Route>
-          </Switch>
-        </div>
+            <SearchBar />
+          </Route>
+          <Route path="/contact-form">
+            <ContactForm />
+          </Route>
+          <Route path="/who-are-we">
+            <WhoAreWe />
+          </Route>
+          <Route
+            path="/recipe/:recipeLink"
+            render={(props) => (
+              <RecipePage
+                link={props.match.params.recipeLink}
+                recipe={recipe}
+                getRecipe={this.getRecipe}
+              />
+            )}
+          />
+          <Route path="/meal-area">
+            <Mealarea />
+          </Route>
+          <Route path="/fav">
+            <FavoritePage />
+          </Route>
+        </Switch>
         <Footer />
       </div>
     );
