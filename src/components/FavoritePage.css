@@ -1,6 +1,8 @@
-.container {
-  width: 80%;
-  margin: 0 auto;
+.FavoritePage h2 {
+  text-align: center;
+  padding-bottom: 20px;
+  color: #797876;
+  text-transform: uppercase;
 }
 
 /************************ 
@@ -8,10 +10,7 @@
 ************************/
 
 @media only screen and (max-width: 376px) {
-  .container {
-    width: 100%;
-    margin: 0;
-  }
+  /* Styles pour cette Media Queries */
 }
 
 /************************ 

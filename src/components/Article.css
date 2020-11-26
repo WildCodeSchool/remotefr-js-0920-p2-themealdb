@@ -31,8 +31,9 @@ body {
   border-radius: 5px;
 }
 
-.Article h2 {
+.Article h3 {
   color: #797876;
+  font-size: 1.3em;
 }
 
 .Article blockquote {
@@ -75,4 +76,36 @@ blockquote > button {
 
 .Article p button.is-favorite {
   color: #ecc94b;
+}
+
+.Article p button:hover {
+  cursor: pointer;
+}
+
+/************************ 
+******VERSION MOBILE*****
+************************/
+
+@media only screen and (max-width: 376px) {
+  .Article {
+    width: 280px;
+    min-height: 180px;
+    padding: 0px 25px;
+  }
+
+  .Article h3 {
+    font-size: 1em;
+  }
+
+  .Article img {
+    align-self: center;
+  }
+}
+
+/************************ 
+******VERSION TABLETTE*****
+************************/
+
+@media only screen and (min-width: 377px) and (max-width: 1024px) {
+  /* Styles pour cette Media Queries */
 }

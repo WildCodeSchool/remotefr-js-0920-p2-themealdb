@@ -39,3 +39,23 @@
   -o-transition: all 0.5s 0s ease;
   transition: all 0.5s 0s ease;
 }
+
+/************************ 
+******VERSION MOBILE*****
+************************/
+
+@media only screen and (max-width: 376px) {
+  .flag-img {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+/************************ 
+******VERSION TABLETTE*****
+************************/
+
+@media only screen and (min-width: 377px) and (max-width: 1024px) {
+  /* Styles pour cette Media Queries */
+}

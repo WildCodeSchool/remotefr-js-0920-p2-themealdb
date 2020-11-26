@@ -11,20 +11,18 @@ function WhoAreWe() {
       <article className="team-history">
         <div className="team-presentation">
           <h2 className="team-h2">Our Team of enthusiasts</h2>
-          <div className="img-container">
-            <a
-              href="./components/images/img1.png"
-              target="_blank"
-              alt="Les Papilles voyageuses"
-              title="Les Papilles voyageuses"
-              className="img-papilles"
-            >
-              <img src={img1} alt="first site" />
-              <div className="overlay">
-                <div className="overlay-text">ENLARGE</div>
-              </div>
-            </a>
-          </div>
+          <a
+            href="./components/images/img1.png"
+            target="_blank"
+            alt="Les Papilles voyageuses"
+            title="Les Papilles voyageuses"
+            className="img-papilles"
+          >
+            <img src={img1} alt="first site" />
+            <div className="overlay">
+              <div className="overlay-text">ENLARGE</div>
+            </div>
+          </a>
           <p>
             Party of a simple adventure with friends in April 2015, The
             Traveling Taste Buds became a business in November 2020. Following

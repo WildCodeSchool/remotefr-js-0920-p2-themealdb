@@ -23,7 +23,7 @@
   padding: 10px;
   width: 55%;
   min-width: 55%;
-  font-size: 18px;
+  font-size: 15px;
   font-style: italic;
   color: #ed8d8d;
   outline: none;
@@ -108,6 +108,32 @@
   top: 1px;
 }
 
-/*****************
-* VERSION MOBILE *
-*****************/
+/************************ 
+******VERSION MOBILE*****
+************************/
+
+@media only screen and (max-width: 376px) {
+  .search-button {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .SearchLabel {
+    width: 70%;
+  }
+}
+
+/************************ 
+******VERSION TABLETTE*****
+************************/
+
+@media only screen and (min-width: 377px) and (max-width: 1024px) {
+  /* Styles pour cette Media Queries */
+}

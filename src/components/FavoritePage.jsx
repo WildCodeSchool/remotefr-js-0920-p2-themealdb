@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import ArticleList from './ArticleList';
+import './FavoritePage.css';
 
 class FavoritePage extends React.Component {
   constructor(props) {
@@ -51,8 +52,8 @@ class FavoritePage extends React.Component {
     const { favArray } = this.state;
     const { onRemove } = this;
     return (
-      <div>
-        <p>This is a favorites page</p>
+      <div className="FavoritePage">
+        <h2>Your favorites below</h2>
 
         {favArray ? (
           <ArticleList results={favArray} onRemove={onRemove} />
