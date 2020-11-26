@@ -41,22 +41,13 @@
   border-radius: 10px;
 }
 
-.Instructions {
-  border-radius: 41px;
-  display: flex;
-  justify-content: space-around;
-  padding: 5rem;
-  align-items: center;
-  font-size: 20px;
-  color: #220901;
-}
-
 /* STARS */
 
-.RecipePage p {
+.recipe-container p {
   display: block;
   text-align: end;
   padding: 2rem;
+  font-size: 2rem;
 }
 
 .RecipePage p button {
@@ -71,6 +62,17 @@
 
 .RecipePage p button.is-favorite {
   color: #ecc94b;
+}
+
+.Instructions p {
+  border-radius: 41px;
+  justify-content: space-around;
+  padding: 5rem;
+  margin-top: 3rem;
+  align-items: center;
+  font-size: 1rem;
+  color: #220901;
+  text-align: justify;
 }
 
 /************************ 
@@ -104,7 +106,12 @@
     align-items: center;
   }
 
-  .RecipePage p {
+  .recipe-container p {
     padding: 10px;
+  }
+
+  .Instructions p {
+    margin: 2rem;
+    padding-bottom: 2rem;
   }
 }

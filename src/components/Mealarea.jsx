@@ -96,7 +96,6 @@ class Mealarea extends React.Component {
               <li key={area.strArea}>
                 <FlagImg
                   area={area.strArea}
-                  // key={'flag' + '{area.strArea}'}
                   getListFromNat={this.getListFromNat}
                 />
                 {area.strArea}
