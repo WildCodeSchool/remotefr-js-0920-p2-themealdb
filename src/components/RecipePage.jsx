@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './RecipePage.css';
 
 function RecipePage({ recipe, getRecipe, link }) {
+  const [favorite, setFavorite] = useState(localStorage.getItem(link) === link);
+
   if (recipe === null || recipe.idMeal !== link) {
     getRecipe(Number(link));
     return <p>Loading</p>;
@@ -56,8 +58,28 @@ function RecipePage({ recipe, getRecipe, link }) {
 
     return (
       <div className="RecipePage">
+
         <h2>{recipe.strMeal}</h2>
+
+
         <div className="recipe-container">
+          <p>
+            <button
+              type="button"
+              className={favorite ? 'is-favorite' : ''}
+              onClick={() => {
+                if (localStorage.getItem(link) === link) {
+                  localStorage.removeItem(link);
+                  setFavorite(false);
+                } else {
+                  localStorage.setItem(link, link);
+                  setFavorite(true);
+                }
+              }}
+            >
+              &#9733;
+            </button>
+          </p>
           <div className="Recipe">
             <div className="ImgRecipe">
               <img src={recipe.strMealThumb} alt={`${recipe.strMeal}`} />
