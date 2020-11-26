@@ -50,3 +50,25 @@
   font-size: 20px;
   color: #220901;
 }
+
+/* STARS */
+
+.RecipePage p {
+  display: block;
+  text-align: end;
+  padding: 2rem;
+}
+
+.RecipePage p button {
+  color: #f8f8f8;
+  background-color: transparent;
+  border: none;
+}
+
+.RecipePage p button:focus {
+  outline: transparent;
+}
+
+.RecipePage p button.is-favorite {
+  color: #ecc94b;
+}
