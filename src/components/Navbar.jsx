@@ -2,65 +2,99 @@ import React from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 
-function Navbar() {
-  return (
-    <nav className="navbar">
-      <Link className="home-link" to="/">
-        <img
-          src="https://cdn.discordapp.com/attachments/768398692226433034/771658707343769610/pexels-photo-1070880.png"
-          alt="logo"
-          className="navbar-logo"
-        />
-      </Link>
-      <div className="menucenter">
-        <ul>
-          <li>
-            <span role="img" aria-label="Home">
-              🏘️
-            </span>
-            <Link to="/" className="cool-link">
-              Home
-            </Link>
-          </li>
-          <li>
-            <span role="img" aria-label="Mea by Area">
-              🍔
-            </span>
-            <Link to="/meal-area" className="cool-link">
-              Meal by Area
-            </Link>
-          </li>
-          <li>
-            <span role="img" aria-label="Favorite">
-              ⭐
-            </span>
-            <Link to="/fav" className="cool-link">
-              Favorite
-            </Link>
-          </li>
-          <li>
-            <span role="img" aria-label="Who you are?">
-              🙍‍♂️
-            </span>
-            <Link to="/who-are-we" className="cool-link">
-              Who are we ?
-            </Link>
-          </li>
-          <li>
-            <span role="img" aria-label="Contact">
-              📝
-            </span>
-            <Link to="/contact-form" className="cool-link">
-              Contact
-            </Link>
-          </li>
-        </ul>
-        <div className="title">
-          <h1>The Traveling Taste Buds: The Return</h1>
+class Navbar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      clicked: false,
+    };
+  }
+
+  handleClick = () => {
+    const { clicked } = this.state;
+    this.setState({ clicked: !clicked });
+  };
+
+  render() {
+    const { clicked } = this.state;
+    return (
+      <nav className="navbar">
+        <Link className="home-link" to="/">
+          <img
+            src="https://cdn.discordapp.com/attachments/768398692226433034/771658707343769610/pexels-photo-1070880.png"
+            alt="logo"
+            className="navbar-logo"
+          />
+        </Link>
+        <div className="menucenter">
+          <button
+            type="button"
+            className="menu-icon"
+            onClick={this.handleClick}
+          >
+            <i className={clicked ? 'fas fa-times' : 'fas fa-bars'} />
+          </button>
+          <ul className={clicked ? 'nav-menu active' : 'nav-menu'}>
+            <li>
+              <span role="img" aria-label="Home">
+                🏘️
+              </span>
+              <Link to="/" className="cool-link" onClick={this.handleClick}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <span role="img" aria-label="Mea by Area">
+                🍔
+              </span>
+              <Link
+                to="/meal-area"
+                className="cool-link"
+                onClick={this.handleClick}
+              >
+                Meal by Area
+              </Link>
+            </li>
+            <li>
+              <span role="img" aria-label="Favorite">
+                ⭐
+              </span>
+              <Link to="/fav" className="cool-link" onClick={this.handleClick}>
+                Favorite
+              </Link>
+            </li>
+            <li>
+              <span role="img" aria-label="Who you are?">
+                🙍‍♂️
+              </span>
+              <Link
+                to="/who-are-we"
+                className="cool-link"
+                onClick={this.handleClick}
+              >
+                Who are we ?
+              </Link>
+            </li>
+            <li>
+              <span role="img" aria-label="Contact">
+                📝
+              </span>
+              <Link
+                to="/contact-form"
+                className="cool-link"
+                onClick={this.handleClick}
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+          <div className="title">
+            <h1>The Traveling Taste Buds: The Return</h1>
+          </div>
         </div>
-      </div>
-    </nav>
-  );
+      </nav>
+    );
+  }
 }
 
 export default Navbar;
