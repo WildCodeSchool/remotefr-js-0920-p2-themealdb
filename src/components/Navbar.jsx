@@ -15,6 +15,10 @@ class Navbar extends React.Component {
     this.setState({ clicked: !clicked });
   };
 
+  handleClickCloseBurgerMenu = () => {
+    this.setState({ clicked: false });
+  };
+
   render() {
     const { clicked } = this.state;
     return (
@@ -39,7 +43,11 @@ class Navbar extends React.Component {
               <span role="img" aria-label="Home">
                 🏘️
               </span>
-              <Link to="/" className="cool-link" onClick={this.handleClick}>
+              <Link
+                to="/"
+                className="cool-link"
+                onClick={this.handleClickCloseBurgerMenu}
+              >
                 Home
               </Link>
             </li>
@@ -50,7 +58,7 @@ class Navbar extends React.Component {
               <Link
                 to="/meal-area"
                 className="cool-link"
-                onClick={this.handleClick}
+                onClick={this.handleClickCloseBurgerMenu}
               >
                 Meal by Area
               </Link>
@@ -59,7 +67,11 @@ class Navbar extends React.Component {
               <span role="img" aria-label="Favorite">
                 ⭐
               </span>
-              <Link to="/fav" className="cool-link" onClick={this.handleClick}>
+              <Link
+                to="/fav"
+                className="cool-link"
+                onClick={this.handleClickCloseBurgerMenu}
+              >
                 Favorite
               </Link>
             </li>
@@ -70,7 +82,7 @@ class Navbar extends React.Component {
               <Link
                 to="/who-are-we"
                 className="cool-link"
-                onClick={this.handleClick}
+                onClick={this.handleClickCloseBurgerMenu}
               >
                 Who are we ?
               </Link>
@@ -82,7 +94,7 @@ class Navbar extends React.Component {
               <Link
                 to="/contact-form"
                 className="cool-link"
-                onClick={this.handleClick}
+                onClick={this.handleClickCloseBurgerMenu}
               >
                 Contact
               </Link>

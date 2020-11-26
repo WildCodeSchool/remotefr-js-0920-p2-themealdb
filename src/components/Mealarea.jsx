@@ -37,7 +37,6 @@ class Mealarea extends React.Component {
   /* GET SPECIAL COUNTRY FROM API */
 
   getListFromNat = (event) => {
-    console.log(event);
     const searchUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?a=${event.target.alt}`;
     if (this.cancel) {
       this.cancel.cancel();

@@ -12,7 +12,8 @@ function WhoAreWe() {
         <div className="team-presentation">
           <h2 className="team-h2">Our Team of enthusiasts</h2>
           <a
-            href="./components/images/img1.png"
+            href="https://cdn.discordapp.com/attachments/768398692226433034/780370406040797194/img1.png"
+            // eslint-disable-next-line react/jsx-no-target-blank
             target="_blank"
             alt="Les Papilles voyageuses"
             title="Les Papilles voyageuses"

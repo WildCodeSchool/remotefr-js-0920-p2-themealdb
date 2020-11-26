@@ -31,19 +31,3 @@ button.ikyGAt:focus {
   cursor: pointer;
   box-shadow: 0 0 1px 3px #220901;
 }
-
-/************************ 
-******VERSION MOBILE*****
-************************/
-
-@media only screen and (max-width: 376px) {
-  /* Styles pour cette Media Queries */
-}
-
-/************************ 
-******VERSION TABLETTE*****
-************************/
-
-@media only screen and (min-width: 377px) and (max-width: 1024px) {
-  /* Styles pour cette Media Queries */
-}

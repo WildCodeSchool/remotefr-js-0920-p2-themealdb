@@ -92,15 +92,12 @@ textarea::placeholder {
     text-align: left;
   }
 
-  .form-control {
-    padding: 0 50px;
+  .ContactForm label {
+    margin: 0 -40px;
   }
-}
 
-/************************ 
-******VERSION TABLETTE*****
-************************/
-
-@media only screen and (min-width: 377px) and (max-width: 1024px) {
-  /* Styles pour cette Media Queries */
+  .searchButton-form {
+    margin: 10px;
+    align-self: center;
+  }
 }
