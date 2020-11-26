@@ -92,7 +92,7 @@ class Mealarea extends React.Component {
         <div className="container-title-flag">
           <h2>Search by Area Meal</h2>
 
-          <ul>
+          <ul className="flag-img">
             {areas.map((area) => (
               <li key={area.strArea}>
                 <FlagImg

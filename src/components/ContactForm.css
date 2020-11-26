@@ -83,7 +83,18 @@ textarea::placeholder {
 ************************/
 
 @media only screen and (max-width: 376px) {
-  /* Styles pour cette Media Queries */
+  .contactform-container {
+    padding: 10px 70px;
+  }
+
+  .contactform-container input,
+  textarea {
+    text-align: left;
+  }
+
+  .form-control {
+    padding: 0 50px;
+  }
 }
 
 /************************ 
