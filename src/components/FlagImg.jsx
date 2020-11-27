@@ -104,16 +104,11 @@ const flags = [
   },
 ];
 function FlagImg(props) {
-  const { area, key, getListFromNat } = props;
+  const { area, getListFromNat } = props;
   const flag = flags.find((imgFlag) => imgFlag.name === area);
   return (
     <div className="FlagImg">
-      <button
-        type="button"
-        className="btnMealarea"
-        onClick={getListFromNat}
-        key={key}
-      >
+      <button type="button" className="btnMealarea" onClick={getListFromNat}>
         <img src={flag.image} alt={flag.name} />
       </button>
     </div>
@@ -122,7 +117,7 @@ function FlagImg(props) {
 
 FlagImg.propTypes = {
   area: PropTypes.string.isRequired,
-  key: PropTypes.string.isRequired,
+
   getListFromNat: PropTypes.func.isRequired,
 };
 
