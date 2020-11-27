@@ -58,9 +58,7 @@ function RecipePage({ recipe, getRecipe, link }) {
 
     return (
       <div className="RecipePage">
-
         <h2>{recipe.strMeal}</h2>
-
 
         <div className="recipe-container">
           <p>

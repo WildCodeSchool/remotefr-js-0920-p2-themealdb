@@ -11,6 +11,7 @@ class FavoritePage extends React.Component {
       favArray: null,
     };
     this.onRemove = this.onRemove.bind(this);
+    this.removeAllFav = this.removeAllFav.bind(this);
   }
 
   componentDidMount() {
@@ -48,12 +49,22 @@ class FavoritePage extends React.Component {
       });
   }
 
+  removeAllFav() {
+    localStorage.clear();
+    this.setState({
+      favArray: [],
+    });
+  }
+
   render() {
     const { favArray } = this.state;
     const { onRemove } = this;
     return (
       <div className="FavoritePage">
         <h2>Your favorites below</h2>
+        <button type="button" className="btn-fav" onClick={this.removeAllFav}>
+          Clear favorites
+        </button>
 
         {favArray ? (
           <ArticleList results={favArray} onRemove={onRemove} />

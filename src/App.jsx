@@ -80,7 +80,7 @@ class App extends React.Component {
             <Route exact path="/">
               <Carousel breakPoints={breakPoints}>
                 {img.map((picture) => (
-                  <Link to={`recipe/${picture.idMeal}`}>
+                  <Link key={picture.idMeal} to={`recipe/${picture.idMeal}`}>
                     <Slider key={picture} img={picture.strMealThumb} />
                   </Link>
                 ))}

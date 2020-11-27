@@ -101,11 +101,3 @@ blockquote > button {
     align-self: center;
   }
 }
-
-/************************ 
-******VERSION TABLETTE*****
-************************/
-
-@media only screen and (min-width: 377px) and (max-width: 1024px) {
-  /* Styles pour cette Media Queries */
-}

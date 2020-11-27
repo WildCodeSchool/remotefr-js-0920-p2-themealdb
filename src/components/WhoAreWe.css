@@ -94,18 +94,3 @@
   transform: translate(-50%, -50%);
   text-align: center;
 }
-
-/************************ 
-******VERSION MOBILE*****
-************************/
-
-@media only screen and (max-width: 376px) {
-}
-
-/************************ 
-******VERSION TABLETTE*****
-************************/
-
-@media only screen and (min-width: 377px) and (max-width: 1024px) {
-  /* Styles pour cette Media Queries */
-}

@@ -21,11 +21,12 @@ function ArticleList({ results, onRemove }) {
 }
 
 ArticleList.propTypes = {
-  results: PropTypes.objectOf(PropTypes.string).isRequired,
+  results: Array.isArray,
   onRemove: PropTypes.func,
 };
 
 ArticleList.defaultProps = {
+  results: [],
   onRemove: () => {},
 };
 

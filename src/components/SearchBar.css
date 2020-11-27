@@ -34,6 +34,7 @@
 }
 
 .SearchLabel > input {
+  color: #ed8d8d;
   background: transparent;
   border: none;
   outline: none;
@@ -128,12 +129,4 @@
   .SearchLabel {
     width: 70%;
   }
-}
-
-/************************ 
-******VERSION TABLETTE*****
-************************/
-
-@media only screen and (min-width: 377px) and (max-width: 1024px) {
-  /* Styles pour cette Media Queries */
 }

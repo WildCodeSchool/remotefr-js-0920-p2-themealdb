@@ -5,9 +5,9 @@ class ContactForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lastName: null,
-      firstName: null,
-      email: null,
+      lastName: '',
+      firstName: '',
+      email: '',
     };
   }
 
@@ -33,7 +33,7 @@ class ContactForm extends Component {
             <label htmlFor="firstname">
               <input
                 type="text"
-                id="name"
+                id="firstName"
                 placeholder="Your firstname"
                 className="form-control"
                 value={firstName}
@@ -43,7 +43,7 @@ class ContactForm extends Component {
             <label htmlFor="lastname">
               <input
                 type="text"
-                id="firstName"
+                id="lastName"
                 placeholder="Your lastname"
                 className="form-control"
                 value={lastName}
