@@ -1,0 +1,103 @@
+.ContactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactform-container {
+  width: 40%;
+  background-color: #cccccc;
+  padding: 1.25em;
+  margin-bottom: 50px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+  font-size: 1.2em;
+}
+
+.contactform-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactform-title {
+  padding-bottom: 20px;
+  color: #797876;
+  text-transform: uppercase;
+}
+
+.form-control {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #434343;
+  color: #e4685d;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.ContactForm input {
+  height: 45px;
+}
+
+.ContactForm textarea {
+  height: 150px;
+}
+
+.ContactForm input::placeholder,
+textarea::placeholder {
+  color: #e4685d;
+}
+
+.searchButton-form {
+  align-self: flex-end;
+  width: 100px;
+  box-shadow: inset 0px 1px 0px 0px #f7c5c0;
+  background: linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+  background-color: #fc8d83;
+  border-radius: 6px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #b23e35;
+}
+
+.searchButton-form:hover {
+  background: linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
+  background-color: #e4685d;
+}
+
+.searchButton-form:active {
+  position: relative;
+  top: 1px;
+}
+
+/************************ 
+******VERSION MOBILE*****
+************************/
+
+@media only screen and (max-width: 376px) {
+  .contactform-container {
+    padding: 10px 70px;
+  }
+
+  .contactform-container input,
+  textarea {
+    text-align: left;
+  }
+
+  .ContactForm label {
+    margin: 0 -40px;
+  }
+
+  .searchButton-form {
+    margin: 10px;
+    align-self: center;
+  }
+}

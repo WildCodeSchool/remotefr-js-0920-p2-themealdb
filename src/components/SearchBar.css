@@ -1,0 +1,132 @@
+.SearchBar {
+  display: flex;
+  flex-direction: column;
+  color: #797876;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.search-button {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 360px;
+}
+
+.SearchLabel {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px auto;
+  padding: 10px;
+  width: 55%;
+  min-width: 55%;
+  font-size: 15px;
+  font-style: italic;
+  color: #ed8d8d;
+  outline: none;
+  border: 2px solid #797876;
+  cursor: auto;
+  background-color: #cccccc;
+  border-radius: 5px;
+}
+
+.SearchLabel > input {
+  color: #ed8d8d;
+  background: transparent;
+  border: none;
+  outline: none;
+  min-width: 55%;
+}
+
+.SearchBar input::placeholder {
+  color: #ed8d8d;
+  font-style: italic;
+}
+
+.SearchIcon {
+  font-size: 20px;
+  box-sizing: border-box;
+  color: #ed8d8d;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: transparent;
+}
+
+.SearchIcon:hover {
+  color: #e4685d;
+}
+
+/* LOADER */
+
+.SearchLoading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* SHOW & HIDE LOADER */
+
+.show {
+  display: inline-block;
+}
+
+.hide {
+  display: none;
+}
+
+/* BUTTON SEARCH BAR */
+
+.searchButton {
+  box-shadow: inset 0px 1px 0px 0px #f7c5c0;
+  background: linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+  background-color: #fc8d83;
+  border-radius: 6px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #b23e35;
+}
+
+.searchButton:hover {
+  background: linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
+  background-color: #e4685d;
+}
+
+.searchButton:active {
+  position: relative;
+  top: 1px;
+}
+
+/************************ 
+******VERSION MOBILE*****
+************************/
+
+@media only screen and (max-width: 376px) {
+  .search-button {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .SearchLabel {
+    width: 70%;
+  }
+}

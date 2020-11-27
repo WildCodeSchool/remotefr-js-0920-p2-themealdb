@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+  background-color: #e1e2dd;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+}
+
+.ArticleList {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Article {
+  background-color: #cccccc;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25em;
+  width: 700px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+  font-size: 1.2em;
+}
+
+.Article img {
+  display: flex;
+  max-height: 120px;
+  margin-right: 1.5rem;
+  border: 4px solid #797876;
+  border-radius: 5px;
+}
+
+.Article h3 {
+  color: #797876;
+  font-size: 1.3em;
+}
+
+.Article blockquote {
+  margin: 0 0 1rem 0;
+}
+
+.Article figcaption {
+  display: flex;
+  flex-direction: column;
+}
+
+.ArticleList a {
+  text-decoration: none;
+}
+
+/* TAGS */
+
+blockquote > button {
+  outline: transparent;
+  color: #797876;
+  background-color: transparent;
+  border: none;
+}
+
+/* STARS */
+
+.Article p {
+  display: block;
+}
+
+.Article p button {
+  color: #f8f8f8;
+  background-color: transparent;
+  border: none;
+}
+
+.Article p button:focus {
+  outline: transparent;
+}
+
+.Article p button.is-favorite {
+  color: #ecc94b;
+}
+
+.Article p button:hover {
+  cursor: pointer;
+}
+
+/************************ 
+******VERSION MOBILE*****
+************************/
+
+@media only screen and (max-width: 376px) {
+  .Article {
+    width: 280px;
+    min-height: 180px;
+    padding: 0px 25px;
+  }
+
+  .Article h3 {
+    font-size: 1em;
+  }
+
+  .Article img {
+    align-self: center;
+  }
+}

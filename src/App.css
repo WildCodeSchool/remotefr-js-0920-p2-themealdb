@@ -1,8 +1,23 @@
-.App {
-  text-align: center;
+.container {
+  width: 80%;
+  margin: 0 auto;
 }
 
-code {
-  background: #eee;
-  color: #d04;
+/************************ 
+******VERSION MOBILE*****
+************************/
+
+@media only screen and (max-width: 376px) {
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/************************ 
+******VERSION TABLETTE*****
+************************/
+
+@media only screen and (min-width: 377px) and (max-width: 1024px) {
+  /* Styles pour cette Media Queries */
 }

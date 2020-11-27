@@ -1,11 +1,10 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "jest": true
   },
   "extends": [
     "plugin:react/recommended",
-    "react-app/jest",
     "airbnb",
     "prettier",
     "prettier/react"
@@ -20,6 +19,5 @@
   },
   "plugins": ["react"],
   "rules": {
-    "react/react-in-jsx-scope": "off"
   }
 }
